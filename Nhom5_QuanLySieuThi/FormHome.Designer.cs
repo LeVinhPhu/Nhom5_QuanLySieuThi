@@ -110,7 +110,7 @@ namespace Nhom5_QuanLySieuThi
             // 
             // panelThongTin
             // 
-            this.panelThongTin.BackColor = System.Drawing.Color.Gainsboro;
+            this.panelThongTin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panelThongTin.Location = new System.Drawing.Point(185, 0);
             this.panelThongTin.Name = "panelThongTin";
             this.panelThongTin.Size = new System.Drawing.Size(773, 505);
