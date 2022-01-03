@@ -58,15 +58,27 @@ namespace Nhom5_QuanLySieuThi
         }
 
 
-        // Form Thêm Sữa Xóa
-        private void LoadFormThemSuaXoa()
+        // Form Thêm Sửa Xóa NV
+        private void LoadFormThemSuaXoaNhanVien()
         {
-            FormThemSuaXoa fThenSuaXoa = new FormThemSuaXoa();
+            FormThemSuaXoaNhanVien fThenSuaXoa = new FormThemSuaXoaNhanVien();
             fThenSuaXoa.TopLevel = false;
             panelLoadForm.Controls.Add(fThenSuaXoa);
             fThenSuaXoa.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             fThenSuaXoa.Dock = DockStyle.Fill;
             fThenSuaXoa.Show();
+        }
+
+
+        // Form Thêm Sửa Xoa SP
+        private void LoadFormThemSuaXoaSanPham()
+        {
+            FormThemSuaXoaSanPham fThenSuaXoaSP = new FormThemSuaXoaSanPham();
+            fThenSuaXoaSP.TopLevel = false;
+            panelLoadForm.Controls.Add(fThenSuaXoaSP);
+            fThenSuaXoaSP.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            fThenSuaXoaSP.Dock = DockStyle.Fill;
+            fThenSuaXoaSP.Show();
         }
 
         private void btHome_Click(object sender, EventArgs e)
@@ -91,7 +103,13 @@ namespace Nhom5_QuanLySieuThi
         private void btQLNhanVien_Click(object sender, EventArgs e)
         {
             CloseForm();
-            LoadFormThemSuaXoa();
+            LoadFormThemSuaXoaNhanVien();
+        }
+
+        private void btQLSanPham_Click(object sender, EventArgs e)
+        {
+            CloseForm();
+            LoadFormThemSuaXoaSanPham();
         }
     }
 }

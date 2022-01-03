@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Nhom5_QuanLySieuThi
 {
-    public partial class FormThemSuaXoa : Form
+    public partial class FormThemSuaXoaNhanVien : Form
     {
-        public FormThemSuaXoa()
+        public FormThemSuaXoaNhanVien()
         {
             InitializeComponent();
         }

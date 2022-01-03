@@ -1,7 +1,7 @@
 ﻿
 namespace Nhom5_QuanLySieuThi
 {
-    partial class FormThemSuaXoa
+    partial class FormThemSuaXoaSanPham
     {
         /// <summary>
         /// Required designer variable.
@@ -29,19 +29,33 @@ namespace Nhom5_QuanLySieuThi
         /// </summary>
         private void InitializeComponent()
         {
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // FormThemSuaXoa
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(384, 110);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(171, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Thêm Sửa Xóa Sản Phẩm";
+            // 
+            // FormThemSuaXoaSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(958, 505);
-            this.Name = "FormThemSuaXoa";
-            this.Text = "FormThemSuaXoa";
+            this.Controls.Add(this.label1);
+            this.Name = "FormThemSuaXoaSanPham";
+            this.Text = "FormThemSuaXoaSanPham";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label1;
     }
 }

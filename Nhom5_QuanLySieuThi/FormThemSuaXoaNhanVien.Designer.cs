@@ -1,7 +1,7 @@
 ﻿
 namespace Nhom5_QuanLySieuThi
 {
-    partial class FormGioHang
+    partial class FormThemSuaXoaNhanVien
     {
         /// <summary>
         /// Required designer variable.
@@ -35,22 +35,20 @@ namespace Nhom5_QuanLySieuThi
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(393, 208);
+            this.label1.Location = new System.Drawing.Point(329, 174);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 17);
+            this.label1.Size = new System.Drawing.Size(163, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "giỏ hàng";
+            this.label1.Text = "Thêm sửa xóa nhân viên";
             // 
-            // FormGioHang
+            // FormThemSuaXoaNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(958, 505);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "FormGioHang";
-            this.Text = "FormGioHang";
+            this.Name = "FormThemSuaXoaNhanVien";
+            this.Text = "FormThemSuaXoaNhanVien";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -44,6 +44,8 @@ namespace Nhom5_QuanLySieuThi
             this.btThongBao = new System.Windows.Forms.Button();
             this.btQLNhanVien = new System.Windows.Forms.Button();
             this.btHome = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btQLSanPham = new System.Windows.Forms.Button();
             this.panelTimKiem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelHome.SuspendLayout();
@@ -152,6 +154,8 @@ namespace Nhom5_QuanLySieuThi
             // panelHome
             // 
             this.panelHome.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panelHome.Controls.Add(this.label4);
+            this.panelHome.Controls.Add(this.btQLSanPham);
             this.panelHome.Controls.Add(this.lbToi);
             this.panelHome.Controls.Add(this.label2);
             this.panelHome.Controls.Add(this.lbHome);
@@ -168,7 +172,7 @@ namespace Nhom5_QuanLySieuThi
             // 
             this.lbToi.AutoSize = true;
             this.lbToi.ForeColor = System.Drawing.Color.Gray;
-            this.lbToi.Location = new System.Drawing.Point(541, 39);
+            this.lbToi.Location = new System.Drawing.Point(475, 39);
             this.lbToi.Name = "lbToi";
             this.lbToi.Size = new System.Drawing.Size(97, 17);
             this.lbToi.TabIndex = 13;
@@ -178,7 +182,7 @@ namespace Nhom5_QuanLySieuThi
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(443, 39);
+            this.label2.Location = new System.Drawing.Point(377, 39);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 17);
             this.label2.TabIndex = 12;
@@ -188,7 +192,7 @@ namespace Nhom5_QuanLySieuThi
             // 
             this.lbHome.AutoSize = true;
             this.lbHome.ForeColor = System.Drawing.Color.Gray;
-            this.lbHome.Location = new System.Drawing.Point(355, 39);
+            this.lbHome.Location = new System.Drawing.Point(289, 39);
             this.lbHome.Name = "lbHome";
             this.lbHome.Size = new System.Drawing.Size(45, 17);
             this.lbHome.TabIndex = 11;
@@ -202,7 +206,7 @@ namespace Nhom5_QuanLySieuThi
             this.btThongBao.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btThongBao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btThongBao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btThongBao.Location = new System.Drawing.Point(465, 6);
+            this.btThongBao.Location = new System.Drawing.Point(398, 6);
             this.btThongBao.Name = "btThongBao";
             this.btThongBao.Size = new System.Drawing.Size(33, 33);
             this.btThongBao.TabIndex = 10;
@@ -218,7 +222,7 @@ namespace Nhom5_QuanLySieuThi
             this.btQLNhanVien.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btQLNhanVien.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btQLNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btQLNhanVien.Location = new System.Drawing.Point(570, 6);
+            this.btQLNhanVien.Location = new System.Drawing.Point(502, 6);
             this.btQLNhanVien.Name = "btQLNhanVien";
             this.btQLNhanVien.Size = new System.Drawing.Size(33, 33);
             this.btQLNhanVien.TabIndex = 9;
@@ -233,12 +237,38 @@ namespace Nhom5_QuanLySieuThi
             this.btHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btHome.Location = new System.Drawing.Point(360, 5);
+            this.btHome.Location = new System.Drawing.Point(294, 5);
             this.btHome.Name = "btHome";
             this.btHome.Size = new System.Drawing.Size(33, 33);
             this.btHome.TabIndex = 8;
             this.btHome.UseVisualStyleBackColor = true;
             this.btHome.Click += new System.EventHandler(this.btHome_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Gray;
+            this.label4.Location = new System.Drawing.Point(574, 39);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(96, 17);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "QL Sản Phẩm";
+            // 
+            // btQLSanPham
+            // 
+            this.btQLSanPham.BackgroundImage = global::Nhom5_QuanLySieuThi.Properties.Resources.setting2;
+            this.btQLSanPham.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btQLSanPham.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btQLSanPham.FlatAppearance.BorderSize = 0;
+            this.btQLSanPham.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btQLSanPham.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btQLSanPham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btQLSanPham.Location = new System.Drawing.Point(606, 6);
+            this.btQLSanPham.Name = "btQLSanPham";
+            this.btQLSanPham.Size = new System.Drawing.Size(33, 33);
+            this.btQLSanPham.TabIndex = 14;
+            this.btQLSanPham.UseVisualStyleBackColor = true;
+            this.btQLSanPham.Click += new System.EventHandler(this.btQLSanPham_Click);
             // 
             // FormQLNhanVien
             // 
@@ -280,5 +310,7 @@ namespace Nhom5_QuanLySieuThi
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btQLSanPham;
     }
 }

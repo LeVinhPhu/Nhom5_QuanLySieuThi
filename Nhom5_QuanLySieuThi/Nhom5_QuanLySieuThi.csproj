@@ -88,11 +88,17 @@
     <Compile Include="FormQLSieuThi.Designer.cs">
       <DependentUpon>FormQLSieuThi.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormThemSuaXoa.cs">
+    <Compile Include="FormThemSuaXoaNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormThemSuaXoa.Designer.cs">
-      <DependentUpon>FormThemSuaXoa.cs</DependentUpon>
+    <Compile Include="FormThemSuaXoaNhanVien.Designer.cs">
+      <DependentUpon>FormThemSuaXoaNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThemSuaXoaSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThemSuaXoaSanPham.Designer.cs">
+      <DependentUpon>FormThemSuaXoaSanPham.cs</DependentUpon>
     </Compile>
     <Compile Include="FormThongBao.cs">
       <SubType>Form</SubType>
@@ -120,8 +126,11 @@
     <EmbeddedResource Include="FormQLSieuThi.resx">
       <DependentUpon>FormQLSieuThi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormThemSuaXoa.resx">
-      <DependentUpon>FormThemSuaXoa.cs</DependentUpon>
+    <EmbeddedResource Include="FormThemSuaXoaNhanVien.resx">
+      <DependentUpon>FormThemSuaXoaNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThemSuaXoaSanPham.resx">
+      <DependentUpon>FormThemSuaXoaSanPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormThongBao.resx">
       <DependentUpon>FormThongBao.cs</DependentUpon>
@@ -185,6 +194,5 @@
   <ItemGroup>
     <None Include="Resources\setting2.png" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
