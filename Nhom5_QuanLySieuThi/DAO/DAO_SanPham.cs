@@ -8,5 +8,6 @@ namespace Nhom5_QuanLySieuThi.DAO
 {
     class DAO_SanPham
     {
+        
     }
 }
