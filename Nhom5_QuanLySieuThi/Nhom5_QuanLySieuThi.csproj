@@ -106,6 +106,7 @@
     <Compile Include="FormToi.Designer.cs">
       <DependentUpon>FormToi.cs</DependentUpon>
     </Compile>
+    <Compile Include="LopDungChung.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormGioHang.resx">
