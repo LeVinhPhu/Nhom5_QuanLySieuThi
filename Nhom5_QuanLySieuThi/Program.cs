@@ -29,7 +29,7 @@ namespace Nhom5_QuanLySieuThi
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormQLSieuThi());
+            Application.Run(new FormHome());
         }
         
     }
