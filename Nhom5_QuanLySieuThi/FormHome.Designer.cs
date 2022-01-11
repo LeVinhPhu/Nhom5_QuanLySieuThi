@@ -29,117 +29,59 @@ namespace Nhom5_QuanLySieuThi
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelLoaiSP = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panelThongTin = new System.Windows.Forms.Panel();
-            this.panelLoaiSP.SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHome));
+            this.productsPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.categoriesPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.defaultThumbnails = new System.Windows.Forms.ImageList(this.components);
             this.SuspendLayout();
             // 
-            // panelLoaiSP
+            // productsPanel
             // 
-            this.panelLoaiSP.BackColor = System.Drawing.Color.White;
-            this.panelLoaiSP.Controls.Add(this.button4);
-            this.panelLoaiSP.Controls.Add(this.button5);
-            this.panelLoaiSP.Controls.Add(this.button6);
-            this.panelLoaiSP.Controls.Add(this.button3);
-            this.panelLoaiSP.Controls.Add(this.button2);
-            this.panelLoaiSP.Controls.Add(this.button1);
-            this.panelLoaiSP.Location = new System.Drawing.Point(0, 0);
-            this.panelLoaiSP.Name = "panelLoaiSP";
-            this.panelLoaiSP.Size = new System.Drawing.Size(185, 505);
-            this.panelLoaiSP.TabIndex = 2;
+            this.productsPanel.AutoScroll = true;
+            this.productsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.productsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.productsPanel.Location = new System.Drawing.Point(197, 0);
+            this.productsPanel.Name = "productsPanel";
+            this.productsPanel.Size = new System.Drawing.Size(761, 505);
+            this.productsPanel.TabIndex = 4;
             // 
-            // button4
+            // categoriesPanel
             // 
-            this.button4.Location = new System.Drawing.Point(24, 410);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(139, 52);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.categoriesPanel.AutoScroll = true;
+            this.categoriesPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
+            this.categoriesPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.categoriesPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.categoriesPanel.Location = new System.Drawing.Point(0, 0);
+            this.categoriesPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.categoriesPanel.Name = "categoriesPanel";
+            this.categoriesPanel.Size = new System.Drawing.Size(197, 505);
+            this.categoriesPanel.TabIndex = 5;
+            this.categoriesPanel.WrapContents = false;
             // 
-            // button5
+            // defaultThumbnails
             // 
-            this.button5.Location = new System.Drawing.Point(24, 340);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(139, 52);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(24, 275);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(139, 52);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(24, 208);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(139, 52);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(24, 139);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(139, 52);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(24, 70);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(139, 52);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // panelThongTin
-            // 
-            this.panelThongTin.BackColor = System.Drawing.Color.Gainsboro;
-            this.panelThongTin.Location = new System.Drawing.Point(185, 0);
-            this.panelThongTin.Name = "panelThongTin";
-            this.panelThongTin.Size = new System.Drawing.Size(773, 505);
-            this.panelThongTin.TabIndex = 3;
+            this.defaultThumbnails.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("defaultThumbnails.ImageStream")));
+            this.defaultThumbnails.TransparentColor = System.Drawing.Color.Transparent;
+            this.defaultThumbnails.Images.SetKeyName(0, "istockphoto-1193046540-612x612.jpg");
             // 
             // FormHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(958, 505);
-            this.Controls.Add(this.panelThongTin);
-            this.Controls.Add(this.panelLoaiSP);
+            this.Controls.Add(this.productsPanel);
+            this.Controls.Add(this.categoriesPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormHome";
             this.Text = "FormHome";
-            this.panelLoaiSP.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panelLoaiSP;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panelThongTin;
+        private System.Windows.Forms.FlowLayoutPanel productsPanel;
+        private System.Windows.Forms.FlowLayoutPanel categoriesPanel;
+        private System.Windows.Forms.ImageList defaultThumbnails;
     }
 }
