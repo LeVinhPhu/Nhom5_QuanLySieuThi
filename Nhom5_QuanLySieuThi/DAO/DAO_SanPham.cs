@@ -24,5 +24,6 @@ namespace Nhom5_QuanLySieuThi.DAO
             List<Product> products = db.Products.Where(p => p.CategoryID == categoryID).ToList();
             return products;
         }
+
     }
 }
