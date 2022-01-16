@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\BUS_Authentication.cs" />
     <Compile Include="BUS\BUS_KhachHang.cs" />
     <Compile Include="BUS\BUS_NhanVien.cs" />
     <Compile Include="BUS\BUS_SanPham.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="CustomizedControls\BoxView.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="DAO\DAO_Authentication.cs" />
     <Compile Include="DAO\DAO_KhachHang.cs" />
     <Compile Include="DAO\DAO_NhanVien.cs" />
     <Compile Include="DAO\DAO_SanPham.cs" />
@@ -128,6 +130,8 @@
     <Compile Include="FormToi.Designer.cs">
       <DependentUpon>FormToi.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalConfigs.cs" />
+    <Compile Include="ILaunchable.cs" />
     <Compile Include="Order.cs">
       <DependentUpon>QuanLySieuThi.tt</DependentUpon>
     </Compile>
@@ -155,8 +159,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLySieuThi.edmx</DependentUpon>
     </Compile>
+    <Compile Include="RegisterRules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterRules.Designer.cs">
+      <DependentUpon>RegisterRules.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CustomizedControls\BoxView.resx">
       <DependentUpon>BoxView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDangKy.resx">
+      <DependentUpon>FormDangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDangNhap.resx">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormGioHang.resx">
       <DependentUpon>FormGioHang.cs</DependentUpon>
@@ -189,6 +205,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RegisterRules.resx">
+      <DependentUpon>RegisterRules.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -254,6 +273,12 @@
       <DependentUpon>QuanLySieuThi.edmx</DependentUpon>
       <LastGenOutput>QuanLySieuThi.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\eye-recognition.png" />
+    <None Include="Resources\Picture1 - Copy.png" />
+    <None Include="Resources\toggle_button_on.png" />
+    <None Include="Resources\toggle_button_off.png" />
+    <None Include="Resources\toggle-button-off.png" />
+    <None Include="Resources\toggle-button.png" />
     <None Include="Resources\no-image.jpg" />
     <None Include="Resources\istockphoto-1193046540-612x612.jpg" />
     <None Include="Resources\default-thumbnail.bmp" />
