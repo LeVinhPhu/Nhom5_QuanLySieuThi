@@ -103,6 +103,16 @@ namespace Nhom5_QuanLySieuThi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap eye_recognition {
+            get {
+                object obj = ResourceManager.GetObject("eye_recognition", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap home {
             get {
                 object obj = ResourceManager.GetObject("home", resourceCulture);
@@ -156,6 +166,26 @@ namespace Nhom5_QuanLySieuThi.Properties {
         internal static System.Drawing.Bitmap shoppingcart {
             get {
                 object obj = ResourceManager.GetObject("shoppingcart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap toggle_button_off {
+            get {
+                object obj = ResourceManager.GetObject("toggle_button_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap toggle_button_on {
+            get {
+                object obj = ResourceManager.GetObject("toggle_button_on", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

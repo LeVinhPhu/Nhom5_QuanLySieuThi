@@ -9,6 +9,7 @@ using System.Windows.Forms;
 
 namespace Nhom5_QuanLySieuThi
 {
+    // this class handle the commnications between the [Home] and [GioHang] forms
     internal class Communicator
     {
         private static Communicator instance;
@@ -31,11 +32,13 @@ namespace Nhom5_QuanLySieuThi
             }
         }
 
+        // this will be called when the ObservableCollection has its values changed
         public void OnCollectionChanged(Object sender, NotifyCollectionChangedEventArgs eventArgs)
         {
             MessageBox.Show("collection changed");
         }
 
+        // this will be called when its containing objects has its [Quantity] property changed
         public void OnOrderedProductQuantityChanged(Object sender, EventArgs eventArgs)
         {
             MessageBox.Show("quantity changed: " + (sender as OrderedProduct).ProductName);

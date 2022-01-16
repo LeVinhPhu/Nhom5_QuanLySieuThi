@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Nhom5_QuanLySieuThi
 {
-    public partial class FormQLSieuThi : Form
+    public partial class FormQLSieuThi : Form, ILaunchable
     {
         public FormQLSieuThi()
         {
@@ -102,6 +102,17 @@ namespace Nhom5_QuanLySieuThi
         {
             CloseForm();
             LoadFormToi();
+        }
+
+        public void Launch(Form source)
+        {
+            source.Hide();
+            this.ShowDialog();
+        }
+
+        private void FormQLSieuThi_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            System.Environment.Exit(0);
         }
     }
 }

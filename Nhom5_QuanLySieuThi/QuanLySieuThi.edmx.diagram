@@ -6,7 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="9ac4aad0551e42b18e732416ae0710ba" Name="Diagram1">
         <EntityTypeShape EntityType="QuanLySieuThiModel.Category" Width="1.5" PointX="0.75" PointY="9.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLySieuThiModel.Customer" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLySieuThiModel.Customer" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLySieuThiModel.Employee" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLySieuThiModel.Order_Detail" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLySieuThiModel.Order" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
