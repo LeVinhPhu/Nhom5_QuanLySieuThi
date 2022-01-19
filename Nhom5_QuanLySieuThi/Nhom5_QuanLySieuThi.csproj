@@ -276,6 +276,7 @@
       <DependentUpon>QuanLySieuThi.edmx</DependentUpon>
       <LastGenOutput>QuanLySieuThi.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\images.png" />
     <None Include="Resources\eye-recognition.png" />
     <None Include="Resources\Picture1 - Copy.png" />
     <None Include="Resources\toggle_button_on.png" />
