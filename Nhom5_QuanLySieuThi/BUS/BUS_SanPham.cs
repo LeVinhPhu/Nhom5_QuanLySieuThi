@@ -30,5 +30,9 @@ namespace Nhom5_QuanLySieuThi.BUS
             }
         }
 
+        public Category GetCategory(int? categoryID)
+        {
+            return dAO_SanPham.GetCategory(categoryID);
+        }
     }
 }

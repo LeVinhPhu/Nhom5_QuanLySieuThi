@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -84,10 +85,11 @@ namespace Nhom5_QuanLySieuThi
             return password.Text;
         }
 
-        private void LaunchForm(ILaunchable launchable)
+        private void LaunchForm(Form form)
         {
-            this.Hide();
-            launchable.Launch(this);
+            Thread thread = new Thread(() => Application.Run(form));
+            thread.Start();
+            this.Close();
         }
 
         private void logInButton_Click(object sender, EventArgs e)
@@ -106,7 +108,7 @@ namespace Nhom5_QuanLySieuThi
                     GlobalConfigs.PhoneNumber = phone;
                     if (isCustomer)
                         LaunchForm(new FormQLSieuThi());
-                    else 
+                    else
                         LaunchForm(new FormQLNhanVien());
                 }
                 else
@@ -132,14 +134,13 @@ namespace Nhom5_QuanLySieuThi
 
         private void cancelButton_Click(object sender, EventArgs e)
         {
-            System.Environment.Exit(0);
+            this.Close();
         }
 
         private void switchModeButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormDangKy formDangKy = new FormDangKy();
-            formDangKy.Launch(this);
+            new FormDangKy().Launch(this);
         }
 
         private void phoneNumber_KeyPress(object sender, KeyPressEventArgs e)

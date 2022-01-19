@@ -8,5 +8,11 @@ namespace Nhom5_QuanLySieuThi.DAO
 {
     class DAO_KhachHang
     {
+        private QuanLySieuThiEntities db = new QuanLySieuThiEntities();
+
+        public Customer GetCustomer(string phoneNumber)
+        {
+            return db.Customers.Where(c => c.PhoneCustomer.Equals(phoneNumber)).FirstOrDefault();
+        }
     }
 }
