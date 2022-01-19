@@ -12,6 +12,12 @@ namespace Nhom5_QuanLySieuThi
 {
     public partial class FormQLSieuThi : Form
     {
+        public static FormHome FHome { get; private set; }
+        public static FormToi FToi { get; private set; }
+        public static FormGioHang FGioHang { get; private set; }
+        public static FormThongBao FThongBao { get; private set; }
+
+
         public FormQLSieuThi()
         {
             InitializeComponent();
@@ -35,48 +41,61 @@ namespace Nhom5_QuanLySieuThi
         // Form Home
         private void LoadFormHome ()
         {
-            FormHome fHome = new FormHome();
-            fHome.TopLevel = false;
-            panelLoadForm.Controls.Add(fHome);
-            fHome.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            fHome.Dock = DockStyle.Fill;
-            fHome.Show();
+            if (FHome == null)
+            {
+                FHome = new FormHome();
+                FHome.TopLevel = false;
+                FHome.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+                FHome.Dock = DockStyle.Fill;
+                FHome.MainCommunicator.StartDeserializeCart();
+            }
+            panelLoadForm.Controls.Add(FHome);
+            FHome.Show();
         }
 
 
         // Form Thông Báo
         private void LoadFormThongBao()
         {
-            FormThongBao fThongBao = new FormThongBao();
-            fThongBao.TopLevel = false;
-            panelLoadForm.Controls.Add(fThongBao);
-            fThongBao.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            fThongBao.Dock = DockStyle.Fill;
-            fThongBao.Show();
+            if (FThongBao == null)
+            {
+                FThongBao = new FormThongBao();
+                FThongBao.TopLevel = false;
+                FThongBao.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+                FThongBao.Dock = DockStyle.Fill;
+            }
+            panelLoadForm.Controls.Add(FThongBao);
+            FThongBao.Show();
         }
 
 
         // Form Tôi (Trang thông tin khách hàng)
         private void LoadFormToi()
         {
-            FormToi fToi = new FormToi();
-            fToi.TopLevel = false;
-            panelLoadForm.Controls.Add(fToi);
-            fToi.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            fToi.Dock = DockStyle.Fill;
-            fToi.Show();
+            if (FToi == null)
+            {
+                FToi = new FormToi();
+                FToi.TopLevel = false;
+                FToi.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+                FToi.Dock = DockStyle.Fill;
+            }
+            panelLoadForm.Controls.Add(FToi);
+            FToi.Show();
         }
 
         
         // Form Giỏ Hàng
         private void LoadFormGioHang()
         {
-            FormGioHang fGioHang = new FormGioHang(); 
-            fGioHang.TopLevel = false;
-            panelLoadForm.Controls.Add(fGioHang);
-            fGioHang.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            fGioHang.Dock = DockStyle.Fill;
-            fGioHang.Show();
+            if (FGioHang == null)
+            {
+                FGioHang = new FormGioHang();
+                FGioHang.TopLevel = false;
+                FGioHang.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+                FGioHang.Dock = DockStyle.Fill;
+            }
+            panelLoadForm.Controls.Add(FGioHang);
+            FGioHang.Show();
         }
 
         // Các Hàng Thực Thi
@@ -102,6 +121,12 @@ namespace Nhom5_QuanLySieuThi
         {
             CloseForm();
             LoadFormToi();
+        }
+
+
+        private void FormQLSieuThi_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            System.Environment.Exit(0);
         }
     }
 }

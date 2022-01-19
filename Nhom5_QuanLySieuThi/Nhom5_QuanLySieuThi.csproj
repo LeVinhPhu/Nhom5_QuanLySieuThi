@@ -33,8 +33,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,12 +58,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\BUS_Authentication.cs" />
     <Compile Include="BUS\BUS_KhachHang.cs" />
     <Compile Include="BUS\BUS_NhanVien.cs" />
     <Compile Include="BUS\BUS_SanPham.cs" />
+    <Compile Include="Category.cs">
+      <DependentUpon>QuanLySieuThi.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Communicator.cs" />
+    <Compile Include="Customer.cs">
+      <DependentUpon>QuanLySieuThi.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomizedControls\BoxView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DAO\DAO_Authentication.cs" />
     <Compile Include="DAO\DAO_KhachHang.cs" />
     <Compile Include="DAO\DAO_NhanVien.cs" />
     <Compile Include="DAO\DAO_SanPham.cs" />
+    <Compile Include="Employee.cs">
+      <DependentUpon>QuanLySieuThi.tt</DependentUpon>
+    </Compile>
     <Compile Include="FormDangKy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,8 +139,50 @@
     <Compile Include="FormToi.Designer.cs">
       <DependentUpon>FormToi.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalConfigs.cs" />
+    <Compile Include="Order.cs">
+      <DependentUpon>QuanLySieuThi.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderedProduct.cs" />
+    <Compile Include="Order_Detail.cs">
+      <DependentUpon>QuanLySieuThi.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>QuanLySieuThi.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLySieuThi.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLySieuThi.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLySieuThi.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLySieuThi.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLySieuThi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLySieuThi.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterRules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterRules.Designer.cs">
+      <DependentUpon>RegisterRules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SimpleOrderedProduct.cs" />
+    <EmbeddedResource Include="CustomizedControls\BoxView.resx">
+      <DependentUpon>BoxView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDangKy.resx">
+      <DependentUpon>FormDangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDangNhap.resx">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormGioHang.resx">
       <DependentUpon>FormGioHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,6 +217,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RegisterRules.resx">
+      <DependentUpon>RegisterRules.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -162,6 +235,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <EntityDeploy Include="QuanLySieuThi.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QuanLySieuThi.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="QuanLySieuThi.edmx.diagram">
+      <DependentUpon>QuanLySieuThi.edmx</DependentUpon>
+    </None>
     <None Include="Resources\search2.png" />
   </ItemGroup>
   <ItemGroup>
@@ -194,5 +274,33 @@
   <ItemGroup>
     <None Include="Resources\setting2.png" />
   </ItemGroup>
+<<<<<<< HEAD
+=======
+  <ItemGroup>
+    <Content Include="QuanLySieuThi.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>QuanLySieuThi.Context.cs</LastGenOutput>
+      <DependentUpon>QuanLySieuThi.edmx</DependentUpon>
+    </Content>
+    <Content Include="QuanLySieuThi.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QuanLySieuThi.edmx</DependentUpon>
+      <LastGenOutput>QuanLySieuThi.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\eye-recognition.png" />
+    <None Include="Resources\Picture1 - Copy.png" />
+    <None Include="Resources\toggle_button_on.png" />
+    <None Include="Resources\toggle_button_off.png" />
+    <None Include="Resources\toggle-button-off.png" />
+    <None Include="Resources\toggle-button.png" />
+    <None Include="Resources\no-image.jpg" />
+    <None Include="Resources\istockphoto-1193046540-612x612.jpg" />
+    <None Include="Resources\default-thumbnail.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+>>>>>>> 5249fd02f702d62bf3820e75b59e652a65b38a1e
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
