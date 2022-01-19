@@ -7,8 +7,10 @@ using System.Windows.Forms;
 
 namespace Nhom5_QuanLySieuThi
 {
+    // 
     public partial class FormHome : Form
     {
+        public Communicator MainCommunicator { get; private set; }
         private Dictionary<Button, List<BoxView>> map = new Dictionary<Button, List<BoxView>>();
         private int originalCateforiesPanelWidth;
         private Boolean increasedSize = false;
@@ -19,9 +21,10 @@ namespace Nhom5_QuanLySieuThi
         {
             InitializeComponent();
             originalCateforiesPanelWidth = categoriesPanel.Width;
-
             UpdateCategories();
+            MainCommunicator = Communicator.Instance;
         }
+
 
         public void UpdateCategories()
         {
@@ -81,7 +84,29 @@ namespace Nhom5_QuanLySieuThi
             }
         }
 
-        
-       
+
+        public void SyncChangesToOrderedProduct(OrderedProduct product)
+        {
+            Category category = bUS_SanPham.GetCategory(product.CategoryID);
+            if (category != null)
+            {
+                foreach (var button in map.Keys)
+                    if (button.Text.Equals(category.CategoryName))
+                    {
+                        for (int i = 0; i < map[button].Count; i++)
+                        {
+                            if (map[button][i].MainProduct.ProductID == product.ProductID)
+                            {
+                                map[button][i] = new BoxView(product);
+                                OnCategoryMouseClick(button, null);
+                                break;
+                            }
+                        }
+                        break;
+                    }
+            }
+        }
+
+
     }
 }

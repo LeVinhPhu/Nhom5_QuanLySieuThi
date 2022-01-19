@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Nhom5_QuanLySieuThi
 {
-    public partial class FormQLNhanVien : Form, ILaunchable
+    public partial class FormQLNhanVien : Form
     {
         public FormQLNhanVien()
         {
@@ -94,9 +94,5 @@ namespace Nhom5_QuanLySieuThi
             LoadFormThemSuaXoa();
         }
 
-        public void Launch(Form source)
-        {
-            this.ShowDialog();
-        }
     }
 }

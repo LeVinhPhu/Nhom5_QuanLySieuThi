@@ -25,5 +25,24 @@ namespace Nhom5_QuanLySieuThi.DAO
             return products;
         }
 
+        public Category GetCategory(int? categoryID)
+        {
+            return db.Categories.Where(c => c.CategoryID == categoryID).FirstOrDefault();
+        }
+
+        public Product GetProduct(int productID)
+        {
+            Product product = db.Products.Where(pd => pd.ProductID == productID).FirstOrDefault();
+
+            Product p = new Product();
+            p.ProductID = product.ProductID;
+            p.CategoryID = product.CategoryID;
+            p.ProductName = product.ProductName;
+            p.Discontinued = product.Discontinued;
+            p.UnitPrice = product.UnitPrice;
+            p.DonViTinh = product.DonViTinh;
+            p.Imgage = new string(product.Imgage.ToCharArray());
+            return p;
+        }
     }
 }

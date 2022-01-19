@@ -7,12 +7,13 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Nhom5_QuanLySieuThi
 {
-    public partial class FormDangKy : Form, ILaunchable
+    public partial class FormDangKy : Form
     {
         private bool passwordVisible = false;
         private bool passwordsMatched = false;
@@ -57,7 +58,7 @@ namespace Nhom5_QuanLySieuThi
 
         private void cancelButton_Click(object sender, EventArgs e)
         {
-            System.Environment.Exit(0);
+            this.Close();
         }
 
         private void switchModeButton_Click(object sender, EventArgs e)
@@ -112,7 +113,9 @@ namespace Nhom5_QuanLySieuThi
                 {
                     GlobalConfigs.PhoneNumber = customer.PhoneCustomer;
                     GlobalConfigs.IsCustomer = true;
-                    new FormQLSieuThi().Launch(this);
+
+                    new Thread(() => Application.Run(new FormQLSieuThi())).Start();
+                    this.Close();
                 }
                 else
                     MessageBox.Show("Cannot create new account", "Register aborted", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); ;

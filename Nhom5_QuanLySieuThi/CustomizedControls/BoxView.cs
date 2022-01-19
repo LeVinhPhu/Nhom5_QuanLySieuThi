@@ -22,8 +22,8 @@ namespace Nhom5_QuanLySieuThi
         public Label Quantity { get; private set; }
         public Button RemoveAll { get; private set; }
         public int NumberOfProducts { get; set; }
-        public Product MainProduct { get; private set; }
-        private Communicator communicator = Communicator.Instance;
+        public OrderedProduct MainProduct { get; private set; }
+        private static Communicator communicator = Communicator.Instance;
 
 
         private void InitializeChildren()
@@ -130,9 +130,26 @@ namespace Nhom5_QuanLySieuThi
 
         }
 
+        public static OrderedProduct ConvertProduct(Product product)
+        {
+            OrderedProduct orderedProduct = new OrderedProduct();
+            orderedProduct.ProductName = product.ProductName;
+            orderedProduct.CategoryID = product.CategoryID;
+            orderedProduct.UnitPrice = product.UnitPrice;
+            orderedProduct.Discontinued = product.Discontinued;
+            orderedProduct.DonViTinh = product.DonViTinh;
+            orderedProduct.Imgage = product.Imgage;
+            orderedProduct.ProductID = product.ProductID;
+
+            orderedProduct.SetQuantityNoNotify((product is OrderedProduct) ? (product as OrderedProduct).Quantity : 0);
+            orderedProduct.QuantityChanged += new EventHandler(communicator.OnOrderedProductQuantityChanged);
+            
+            return orderedProduct;
+        }
+
         public BoxView(Product product) : base() 
         {
-            MainProduct = product;
+            MainProduct = ConvertProduct(product);
             InitializeChildren();
             ConfigureChildren();
 
@@ -165,27 +182,27 @@ namespace Nhom5_QuanLySieuThi
         }
 
                                               // POTENTIALLY BUGGY HERE
-        private void LoadFromProduct()
+        public void LoadFromProduct()
         {
             this.ProductPrice.Text = MainProduct.UnitPrice.ToString();
             this.ProductName.Text = MainProduct.ProductName.ToString();
             if (MainProduct.Imgage != null && !MainProduct.Imgage.Trim().Equals(""))
                 this.ImageView.Image = ByteToImg(MainProduct.Imgage);
-            //ImageView.Image = ByteToImg(null);
+            
+            if (MainProduct.Quantity > 0)
+            {
+                AddToCart.Visible = false;
+                RemoveAll.Enabled = true;
+                Quantity.Text = MainProduct.Quantity.ToString();
+                NumberOfProducts = MainProduct.Quantity;
+            }
         }
 
         public void AddProductToCart()
         {
             // add new
-            OrderedProduct product = new OrderedProduct();
-            product.ProductID = MainProduct.ProductID;
-            product.ProductName = MainProduct.ProductName;
-            product.CategoryID = MainProduct.CategoryID;
-            product.UnitPrice = MainProduct.UnitPrice;
-            product.DonViTinh = MainProduct.DonViTinh;
-            product.Discontinued = MainProduct.Discontinued;
-            product.Imgage = MainProduct.Imgage;
-
+            OrderedProduct product = new OrderedProduct(MainProduct, 1);
+            product.QuantityChanged += new EventHandler(communicator.OnOrderedProductQuantityChanged);
             communicator.OrderedProducts.Add(product);
             // product.Imgage
         }
@@ -206,6 +223,7 @@ namespace Nhom5_QuanLySieuThi
             if (orderedProduct == null)
                 throw new NullReferenceException("Ordered product does not exists to delete");
             communicator.OrderedProducts.Remove(orderedProduct);
+            communicator.OnRemovedOrderedProduct(MainProduct, null);
         }
         public void MouseClickAddToCart(Object sender, MouseEventArgs mouseEvent)
         {
