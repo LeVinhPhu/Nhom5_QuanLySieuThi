@@ -63,8 +63,6 @@ namespace Nhom5_QuanLySieuThi
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
-            this.reportViewer1.Print += new Microsoft.Reporting.WinForms.ReportPrintEventHandler(this.reportViewer1_Print);
-            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // getRevenueListETableAdapter
             // 

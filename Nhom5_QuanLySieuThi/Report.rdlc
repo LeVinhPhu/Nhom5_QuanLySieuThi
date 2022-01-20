@@ -522,7 +522,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Năm</Value>
+                <Value>Năm:</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
                 </Style>
@@ -713,7 +713,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Tổng tiền</Value>
+                <Value>Tổng tiền:</Value>
                 <Style>
                   <FontSize>14pt</FontSize>
                   <Color>White</Color>
@@ -727,7 +727,7 @@
         <Top>2.1875in</Top>
         <Left>2.28833in</Left>
         <Height>0.30639in</Height>
-        <Width>1.16667in</Width>
+        <Width>0.89167in</Width>
         <ZIndex>11</ZIndex>
         <Style>
           <Border>
@@ -756,7 +756,9 @@
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox8</rd:DefaultName>
@@ -767,8 +769,8 @@
             </Action>
           </Actions>
         </ActionInfo>
-        <Top>5.55625cm</Top>
-        <Left>9.17787cm</Left>
+        <Top>5.59153cm</Top>
+        <Left>8.25359cm</Left>
         <Height>0.74294cm</Height>
         <Width>3.74651cm</Width>
         <ZIndex>12</ZIndex>

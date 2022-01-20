@@ -18,27 +18,15 @@ namespace Nhom5_QuanLySieuThi
             InitializeComponent();
         }
 
-        private void reportViewer1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Không có máy in");
-        }
-
-        private void reportViewer1_Print(object sender, Microsoft.Reporting.WinForms.ReportPrintEventArgs e)
-        {
-            MessageBox.Show("Không có máy in");
-            return;
         }
 
         private void FormReport_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'QuanLySieuThiDataSet.getRevenueListE' table. You can move, or remove it, as needed.
             this.getRevenueListETableAdapter.Fill(this.QuanLySieuThiDataSet.getRevenueListE, month, year);
-
             this.reportViewer1.RefreshReport();
         }
     }
