@@ -22,6 +22,7 @@ namespace Nhom5_QuanLySieuThi
             panelLoadForm.Controls.Clear();
         }
 
+
         // Form Home
         private void LoadFormHome()
         {
@@ -38,6 +39,17 @@ namespace Nhom5_QuanLySieuThi
         private void LoadFormThongBao()
         {
             FormThongBao fThongBao = new FormThongBao();
+            fThongBao.TopLevel = false;
+            panelLoadForm.Controls.Add(fThongBao);
+            fThongBao.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            fThongBao.Dock = DockStyle.Fill;
+            fThongBao.Show();
+        }
+        
+        //Form Báo cáo
+        private void LoadFormBaoCao()
+        {
+            FormSaleReport fThongBao = new FormSaleReport();
             fThongBao.TopLevel = false;
             panelLoadForm.Controls.Add(fThongBao);
             fThongBao.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -78,7 +90,8 @@ namespace Nhom5_QuanLySieuThi
         private void btThongBao_Click(object sender, EventArgs e)
         {
             CloseForm();
-            LoadFormThongBao();
+            //LoadFormThongBao();
+            LoadFormBaoCao();
         }
 
 

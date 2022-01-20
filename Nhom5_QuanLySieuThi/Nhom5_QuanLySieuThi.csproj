@@ -39,6 +39,24 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -115,6 +133,18 @@
     <Compile Include="FormQLSieuThi.Designer.cs">
       <DependentUpon>FormQLSieuThi.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReport.Designer.cs">
+      <DependentUpon>FormReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSaleReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSaleReport.Designer.cs">
+      <DependentUpon>FormSaleReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormThemSuaXoa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +162,9 @@
     </Compile>
     <Compile Include="FormToi.Designer.cs">
       <DependentUpon>FormToi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="getRevenueListE_Result.cs">
+      <DependentUpon>QuanLySieuThi.tt</DependentUpon>
     </Compile>
     <Compile Include="GlobalConfigs.cs" />
     <Compile Include="Order.cs">
@@ -161,6 +194,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLySieuThi.edmx</DependentUpon>
     </Compile>
+    <Compile Include="QuanLySieuThiDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLySieuThiDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="RegisterRules.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +206,7 @@
       <DependentUpon>RegisterRules.cs</DependentUpon>
     </Compile>
     <Compile Include="SimpleOrderedProduct.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="CustomizedControls\BoxView.resx">
       <DependentUpon>BoxView.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,6 +227,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormQLSieuThi.resx">
       <DependentUpon>FormQLSieuThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReport.resx">
+      <DependentUpon>FormReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSaleReport.resx">
+      <DependentUpon>FormSaleReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormThemSuaXoa.resx">
       <DependentUpon>FormThemSuaXoa.cs</DependentUpon>
@@ -211,6 +256,7 @@
     <EmbeddedResource Include="RegisterRules.resx">
       <DependentUpon>RegisterRules.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -232,6 +278,17 @@
     </EntityDeploy>
     <None Include="QuanLySieuThi.edmx.diagram">
       <DependentUpon>QuanLySieuThi.edmx</DependentUpon>
+    </None>
+    <None Include="QuanLySieuThiDataSet1.xsc">
+      <DependentUpon>QuanLySieuThiDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLySieuThiDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLySieuThiDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLySieuThiDataSet1.xss">
+      <DependentUpon>QuanLySieuThiDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Resources\search2.png" />
   </ItemGroup>
@@ -275,6 +332,22 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>QuanLySieuThi.edmx</DependentUpon>
       <LastGenOutput>QuanLySieuThi.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\icons8-print-30.png" />
+    <None Include="Resources\icons8-print-301.png" />
+    <None Include="Resources\icons8-print-15.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\eye-recognition.png" />
     <None Include="Resources\Picture1 - Copy.png" />

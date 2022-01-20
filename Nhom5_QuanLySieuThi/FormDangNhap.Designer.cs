@@ -31,6 +31,7 @@ namespace Nhom5_QuanLySieuThi
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDangNhap));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.passwordView = new System.Windows.Forms.PictureBox();
             this.toggleSwitch = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.logInRole = new System.Windows.Forms.Label();
@@ -43,11 +44,10 @@ namespace Nhom5_QuanLySieuThi
             this.password = new System.Windows.Forms.TextBox();
             this.phoneNumber = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.passwordView = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.passwordView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toggleSwitch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.passwordView)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -69,6 +69,19 @@ namespace Nhom5_QuanLySieuThi
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(404, 407);
             this.panel1.TabIndex = 0;
+            // 
+            // passwordView
+            // 
+            this.passwordView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(42)))), ((int)(((byte)(61)))));
+            this.passwordView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.passwordView.Image = ((System.Drawing.Image)(resources.GetObject("passwordView.Image")));
+            this.passwordView.Location = new System.Drawing.Point(311, 238);
+            this.passwordView.Name = "passwordView";
+            this.passwordView.Size = new System.Drawing.Size(32, 32);
+            this.passwordView.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.passwordView.TabIndex = 10;
+            this.passwordView.TabStop = false;
+            this.passwordView.Click += new System.EventHandler(this.passwordView_Click);
             // 
             // toggleSwitch
             // 
@@ -147,7 +160,7 @@ namespace Nhom5_QuanLySieuThi
             this.switchModeButton.Location = new System.Drawing.Point(60, 315);
             this.switchModeButton.Name = "switchModeButton";
             this.switchModeButton.Size = new System.Drawing.Size(92, 39);
-            this.switchModeButton.TabIndex = 1;
+            this.switchModeButton.TabIndex = 4;
             this.switchModeButton.Text = "REGISTER";
             this.switchModeButton.UseVisualStyleBackColor = false;
             this.switchModeButton.Click += new System.EventHandler(this.switchModeButton_Click);
@@ -162,7 +175,7 @@ namespace Nhom5_QuanLySieuThi
             this.cancelButton.Location = new System.Drawing.Point(169, 315);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(83, 39);
-            this.cancelButton.TabIndex = 1;
+            this.cancelButton.TabIndex = 3;
             this.cancelButton.Text = "CANCEL";
             this.cancelButton.UseVisualStyleBackColor = false;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
@@ -177,7 +190,7 @@ namespace Nhom5_QuanLySieuThi
             this.logInButton.Location = new System.Drawing.Point(268, 315);
             this.logInButton.Name = "logInButton";
             this.logInButton.Size = new System.Drawing.Size(75, 39);
-            this.logInButton.TabIndex = 1;
+            this.logInButton.TabIndex = 2;
             this.logInButton.Text = "LOG IN";
             this.logInButton.UseVisualStyleBackColor = false;
             this.logInButton.Click += new System.EventHandler(this.logInButton_Click);
@@ -193,7 +206,7 @@ namespace Nhom5_QuanLySieuThi
             this.password.Multiline = true;
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(252, 32);
-            this.password.TabIndex = 0;
+            this.password.TabIndex = 1;
             this.password.WordWrap = false;
             this.password.Click += new System.EventHandler(this.TextBox_Click);
             this.password.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.password_KeyPress);
@@ -226,19 +239,6 @@ namespace Nhom5_QuanLySieuThi
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // passwordView
-            // 
-            this.passwordView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(42)))), ((int)(((byte)(61)))));
-            this.passwordView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.passwordView.Image = ((System.Drawing.Image)(resources.GetObject("passwordView.Image")));
-            this.passwordView.Location = new System.Drawing.Point(311, 238);
-            this.passwordView.Name = "passwordView";
-            this.passwordView.Size = new System.Drawing.Size(32, 32);
-            this.passwordView.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.passwordView.TabIndex = 10;
-            this.passwordView.TabStop = false;
-            this.passwordView.Click += new System.EventHandler(this.passwordView_Click);
-            // 
             // FormDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -255,9 +255,9 @@ namespace Nhom5_QuanLySieuThi
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.passwordView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.toggleSwitch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.passwordView)).EndInit();
             this.ResumeLayout(false);
 
         }

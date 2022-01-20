@@ -31,6 +31,7 @@ namespace Nhom5_QuanLySieuThi
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDangKy));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.viewRules = new System.Windows.Forms.Button();
             this.passwordView = new System.Windows.Forms.PictureBox();
             this.switchModeButton = new System.Windows.Forms.Button();
             this.signUpButton = new System.Windows.Forms.Button();
@@ -51,7 +52,6 @@ namespace Nhom5_QuanLySieuThi
             this.lastName = new System.Windows.Forms.TextBox();
             this.firstName = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.viewRules = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.passwordView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -85,6 +85,20 @@ namespace Nhom5_QuanLySieuThi
             this.panel1.Size = new System.Drawing.Size(499, 523);
             this.panel1.TabIndex = 0;
             // 
+            // viewRules
+            // 
+            this.viewRules.BackColor = System.Drawing.Color.Transparent;
+            this.viewRules.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.viewRules.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.viewRules.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.viewRules.Location = new System.Drawing.Point(36, 449);
+            this.viewRules.Name = "viewRules";
+            this.viewRules.Size = new System.Drawing.Size(121, 39);
+            this.viewRules.TabIndex = 10;
+            this.viewRules.Text = "VIEW RULES";
+            this.viewRules.UseVisualStyleBackColor = false;
+            this.viewRules.Click += new System.EventHandler(this.viewRules_Click);
+            // 
             // passwordView
             // 
             this.passwordView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(42)))), ((int)(((byte)(61)))));
@@ -108,7 +122,7 @@ namespace Nhom5_QuanLySieuThi
             this.switchModeButton.Location = new System.Drawing.Point(190, 449);
             this.switchModeButton.Name = "switchModeButton";
             this.switchModeButton.Size = new System.Drawing.Size(92, 39);
-            this.switchModeButton.TabIndex = 8;
+            this.switchModeButton.TabIndex = 9;
             this.switchModeButton.Text = "LOG IN";
             this.switchModeButton.UseVisualStyleBackColor = false;
             this.switchModeButton.Click += new System.EventHandler(this.switchModeButton_Click);
@@ -138,7 +152,7 @@ namespace Nhom5_QuanLySieuThi
             this.cancelButton.Location = new System.Drawing.Point(294, 449);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(83, 39);
-            this.cancelButton.TabIndex = 7;
+            this.cancelButton.TabIndex = 8;
             this.cancelButton.Text = "CANCEL";
             this.cancelButton.UseVisualStyleBackColor = false;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
@@ -149,7 +163,7 @@ namespace Nhom5_QuanLySieuThi
             this.birthDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.birthDate.Name = "birthDate";
             this.birthDate.Size = new System.Drawing.Size(283, 29);
-            this.birthDate.TabIndex = 6;
+            this.birthDate.TabIndex = 2;
             this.birthDate.ValueChanged += new System.EventHandler(this.birthDate_ValueChanged);
             // 
             // label5
@@ -235,7 +249,7 @@ namespace Nhom5_QuanLySieuThi
             this.password.Multiline = true;
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(250, 32);
-            this.password.TabIndex = 1;
+            this.password.TabIndex = 5;
             this.password.WordWrap = false;
             this.password.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.password_KeyPress);
             // 
@@ -260,7 +274,7 @@ namespace Nhom5_QuanLySieuThi
             this.confirmPassword.Multiline = true;
             this.confirmPassword.Name = "confirmPassword";
             this.confirmPassword.Size = new System.Drawing.Size(283, 32);
-            this.confirmPassword.TabIndex = 1;
+            this.confirmPassword.TabIndex = 6;
             this.confirmPassword.WordWrap = false;
             this.confirmPassword.TextChanged += new System.EventHandler(this.confirmPassword_TextChanged);
             this.confirmPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.password_KeyPress);
@@ -276,7 +290,7 @@ namespace Nhom5_QuanLySieuThi
             this.phoneNumber.Multiline = true;
             this.phoneNumber.Name = "phoneNumber";
             this.phoneNumber.Size = new System.Drawing.Size(283, 32);
-            this.phoneNumber.TabIndex = 1;
+            this.phoneNumber.TabIndex = 4;
             this.phoneNumber.WordWrap = false;
             this.phoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.phoneNumber_KeyPress);
             // 
@@ -291,7 +305,7 @@ namespace Nhom5_QuanLySieuThi
             this.address.Multiline = true;
             this.address.Name = "address";
             this.address.Size = new System.Drawing.Size(283, 32);
-            this.address.TabIndex = 1;
+            this.address.TabIndex = 3;
             this.address.WordWrap = false;
             // 
             // lastName
@@ -319,7 +333,7 @@ namespace Nhom5_QuanLySieuThi
             this.firstName.Multiline = true;
             this.firstName.Name = "firstName";
             this.firstName.Size = new System.Drawing.Size(283, 32);
-            this.firstName.TabIndex = 1;
+            this.firstName.TabIndex = 0;
             this.firstName.WordWrap = false;
             // 
             // pictureBox1
@@ -334,20 +348,6 @@ namespace Nhom5_QuanLySieuThi
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
-            // 
-            // viewRules
-            // 
-            this.viewRules.BackColor = System.Drawing.Color.Transparent;
-            this.viewRules.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.viewRules.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.viewRules.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.viewRules.Location = new System.Drawing.Point(36, 449);
-            this.viewRules.Name = "viewRules";
-            this.viewRules.Size = new System.Drawing.Size(121, 39);
-            this.viewRules.TabIndex = 10;
-            this.viewRules.Text = "VIEW RULES";
-            this.viewRules.UseVisualStyleBackColor = false;
-            this.viewRules.Click += new System.EventHandler(this.viewRules_Click);
             // 
             // FormDangKy
             // 
