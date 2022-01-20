@@ -117,6 +117,32 @@ namespace Nhom5_QuanLySieuThi
             thread.Start();
         }
 
+        public void DeleteCartJson()
+        {
+            string fileName = "C_" + GlobalConfigs.PhoneNumber.GetHashCode().ToString() + ".json";
+            if (File.Exists(fileName))
+            {
+                File.SetAttributes(fileName, FileAttributes.Normal);
+                File.Delete(fileName);
+            }
+        }
+
+        public void EmptyCart()
+        {
+            if (OrderedProducts.Count > 0)
+            {
+                foreach (OrderedProduct product in OrderedProducts)
+                {
+                    product.SetQuantityNoNotify(0);
+                    SyncChangesToHome(product);
+                }
+
+                OrderedProducts = new ObservableCollection<OrderedProduct>();
+                OrderedProducts.CollectionChanged += new NotifyCollectionChangedEventHandler(this.OnCollectionChanged);
+                SyncChangesToCart();
+            }
+        }
+
         public void SerializeCart()
         {
             if (GlobalConfigs.PhoneNumber != null)
@@ -126,11 +152,7 @@ namespace Nhom5_QuanLySieuThi
                 List<SimpleOrderedProduct> list = OrderedProducts.Select(p => new SimpleOrderedProduct(p.ProductID, p.Quantity)).ToList();
                 if (list.Count > 0)
                 {
-                    if (File.Exists(fileName))
-                    {
-                        File.SetAttributes(fileName, FileAttributes.Normal);
-                        File.Delete(fileName);
-                    }
+                    DeleteCartJson();
                     using (StreamWriter file = File.CreateText(fileName))
                     {
                         JsonSerializer serializer = new JsonSerializer();
