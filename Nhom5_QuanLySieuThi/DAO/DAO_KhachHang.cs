@@ -17,8 +17,7 @@ namespace Nhom5_QuanLySieuThi.DAO
 
         public void suaThongTinKhachHang(Customer cm)
         {
-            Customer c = new Customer();
-            c = db.Customers.Find(cm.PhoneCustomer);
+            Customer c = db.Customers.Find(cm.PhoneCustomer);
             c.FirstName = cm.FirstName;
             c.LastName = cm.LastName;
             c.BirthDate = cm.BirthDate;

@@ -36,6 +36,7 @@ namespace Nhom5_QuanLySieuThi
             dTNgaySinh.Text = c.BirthDate.ToString();
             txtDiachi.Text = c.Address.ToString();
             txtGhiChu.Text = c.Notes;
+            txtPass.Text = c.PassWord;
         }
 
         private void btSuaTT_Click(object sender, EventArgs e)
@@ -47,17 +48,19 @@ namespace Nhom5_QuanLySieuThi
                 txtTen.ReadOnly = false;
                 txtGhiChu.ReadOnly = false;
                 txtDiachi.ReadOnly = false;
+                txtPass.ReadOnly = false;
                 flag = false;
             }
             else
             {
                 Customer c = new Customer();
-                c.PhoneCustomer = txtSĐT.ToString();
-                c.LastName = txtHo.ToString();
-                c.FirstName = txtTen.ToString();
+                c.PhoneCustomer = txtSĐT.Text;
+                c.LastName = txtHo.Text;
+                c.FirstName = txtTen.Text;
                 c.BirthDate = dTNgaySinh.Value;
-                c.Address = txtDiachi.ToString();
-                c.Notes = txtGhiChu.ToString();
+                c.Address = txtDiachi.Text;
+                c.Notes = txtGhiChu.Text;
+                c.PassWord = txtPass.Text;
 
                 bUS_KhachHang.suaThongTinKhachHang(c);
 
@@ -66,6 +69,7 @@ namespace Nhom5_QuanLySieuThi
                 txtTen.ReadOnly = true;
                 txtGhiChu.ReadOnly = true;
                 txtDiachi.ReadOnly = true;
+                txtPass.ReadOnly = true;
                 flag = true;
             }
         }

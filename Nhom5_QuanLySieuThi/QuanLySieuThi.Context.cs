@@ -12,6 +12,8 @@ namespace Nhom5_QuanLySieuThi
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class QuanLySieuThiEntities : DbContext
     {
@@ -31,5 +33,18 @@ namespace Nhom5_QuanLySieuThi
         public virtual DbSet<Order_Detail> Order_Details { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<Product> Products { get; set; }
+    
+        public virtual ObjectResult<getRevenueListE_Result> getRevenueListE(Nullable<int> month, Nullable<int> year)
+        {
+            var monthParameter = month.HasValue ?
+                new ObjectParameter("month", month) :
+                new ObjectParameter("month", typeof(int));
+    
+            var yearParameter = year.HasValue ?
+                new ObjectParameter("year", year) :
+                new ObjectParameter("year", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<getRevenueListE_Result>("getRevenueListE", monthParameter, yearParameter);
+        }
     }
 }
