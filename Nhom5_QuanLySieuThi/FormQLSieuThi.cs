@@ -16,6 +16,11 @@ namespace Nhom5_QuanLySieuThi
         public static FormToi FToi { get; private set; }
         public static FormGioHang FGioHang { get; private set; }
         public static FormThongBao FThongBao { get; private set; }
+        private Form currentForm;
+        public TextBox SearchBar
+        {
+            get { return txtTimKiem; }
+        }
 
 
         public FormQLSieuThi()
@@ -49,7 +54,10 @@ namespace Nhom5_QuanLySieuThi
                 FHome.Dock = DockStyle.Fill;
                 FHome.MainCommunicator.StartDeserializeCart();
             }
+            currentForm = FHome;
             panelLoadForm.Controls.Add(FHome);
+            txtTimKiem.Enabled = true;
+            txtTimKiem.Text = "";
             FHome.Show();
         }
 
@@ -64,6 +72,7 @@ namespace Nhom5_QuanLySieuThi
                 FThongBao.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
                 FThongBao.Dock = DockStyle.Fill;
             }
+            currentForm = FThongBao;
             panelLoadForm.Controls.Add(FThongBao);
             FThongBao.Show();
         }
@@ -79,6 +88,7 @@ namespace Nhom5_QuanLySieuThi
                 FToi.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
                 FToi.Dock = DockStyle.Fill;
             }
+            currentForm = FToi;
             panelLoadForm.Controls.Add(FToi);
             FToi.Show();
         }
@@ -94,7 +104,10 @@ namespace Nhom5_QuanLySieuThi
                 FGioHang.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
                 FGioHang.Dock = DockStyle.Fill;
             }
+            currentForm = FGioHang;
             panelLoadForm.Controls.Add(FGioHang);
+            txtTimKiem.Enabled = false;
+            txtTimKiem.Text = "Search is disable when is in cart view";
             FGioHang.Show();
         }
 
@@ -127,6 +140,26 @@ namespace Nhom5_QuanLySieuThi
         private void FormQLSieuThi_FormClosed(object sender, FormClosedEventArgs e)
         {
             System.Environment.Exit(0);
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            if (currentForm != null)
+            {
+                PerformFilter_Home();
+            }
+        }
+
+        private void PerformFilter_Home()
+        {
+            if (currentForm == FHome)
+                FHome.Filter = txtTimKiem.Text.Trim();
+
+        }
+
+        private void txtTimKiem_Click(object sender, EventArgs e)
+        {
+            txtTimKiem.Text = "";
         }
     }
 }
