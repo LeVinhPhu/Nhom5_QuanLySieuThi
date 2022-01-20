@@ -4,12 +4,12 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="QuanLySieuThiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="QuanLySieuThiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Categories">
           <Key>
             <PropertyRef Name="CategoryID" />
           </Key>
-          <Property Name="CategoryID" Type="int" Nullable="false" />
+          <Property Name="CategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CategoryName" Type="nvarchar" MaxLength="15" Nullable="false" />
           <Property Name="Description" Type="nvarchar(max)" />
         </EntityType>
@@ -130,6 +130,10 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="getRevenueListE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="month" Type="int" Mode="In" />
+          <Parameter Name="year" Type="int" Mode="In" />
+        </Function>
         <EntityContainer Name="QuanLySieuThiModelStoreContainer">
           <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
@@ -158,8 +162,7 @@
             <End Role="Products" EntitySet="Products" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="QuanLySieuThiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -325,7 +328,17 @@
             <End Role="Products" EntitySet="Products" />
             <End Role="Order_Details" EntitySet="Order_Details" />
           </AssociationSet>
+          <FunctionImport Name="getRevenueListE" ReturnType="Collection(QuanLySieuThiModel.getRevenueListE_Result)">
+            <Parameter Name="month" Mode="In" Type="Int32" />
+            <Parameter Name="year" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
+        <ComplexType Name="getRevenueListE_Result">
+          <Property Type="Int32" Name="ProductID" Nullable="false" />
+          <Property Type="String" Name="ProductName" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="number_of_product_sold" Nullable="true" />
+          <Property Type="Decimal" Name="total" Nullable="true" Precision="19" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -402,6 +415,16 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="getRevenueListE" FunctionName="QuanLySieuThiModel.Store.getRevenueListE">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QuanLySieuThiModel.getRevenueListE_Result">
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="number_of_product_sold" ColumnName="number_of_product_sold" />
+                <ScalarProperty Name="total" ColumnName="total" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

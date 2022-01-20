@@ -31,9 +31,12 @@ namespace Nhom5_QuanLySieuThi
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDangNhap));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.rememberMe = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.passwordView = new System.Windows.Forms.PictureBox();
             this.toggleSwitch = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.rememberMeLabel = new System.Windows.Forms.Label();
             this.logInRole = new System.Windows.Forms.Label();
             this.errorMessage = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,14 +47,11 @@ namespace Nhom5_QuanLySieuThi
             this.password = new System.Windows.Forms.TextBox();
             this.phoneNumber = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.rememberMe = new System.Windows.Forms.PictureBox();
-            this.rememberMeLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rememberMe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.passwordView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toggleSwitch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rememberMe)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -76,6 +76,29 @@ namespace Nhom5_QuanLySieuThi
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(404, 407);
             this.panel1.TabIndex = 0;
+            // 
+            // rememberMe
+            // 
+            this.rememberMe.BackColor = System.Drawing.Color.Transparent;
+            this.rememberMe.Location = new System.Drawing.Point(255, 83);
+            this.rememberMe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rememberMe.Name = "rememberMe";
+            this.rememberMe.Size = new System.Drawing.Size(89, 35);
+            this.rememberMe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.rememberMe.TabIndex = 12;
+            this.rememberMe.TabStop = false;
+            this.rememberMe.MouseClick += new System.Windows.Forms.MouseEventHandler(this.rememberMe_MouseClick);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label4.Location = new System.Drawing.Point(56, 90);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(125, 21);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Remember me?";
             // 
             // passwordView
             // 
@@ -112,6 +135,17 @@ namespace Nhom5_QuanLySieuThi
             this.label3.Size = new System.Drawing.Size(71, 21);
             this.label3.TabIndex = 2;
             this.label3.Text = "Login as:";
+            // 
+            // rememberMeLabel
+            // 
+            this.rememberMeLabel.AutoSize = true;
+            this.rememberMeLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rememberMeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(42)))), ((int)(((byte)(61)))));
+            this.rememberMeLabel.Location = new System.Drawing.Point(187, 88);
+            this.rememberMeLabel.Name = "rememberMeLabel";
+            this.rememberMeLabel.Size = new System.Drawing.Size(34, 24);
+            this.rememberMeLabel.TabIndex = 2;
+            this.rememberMeLabel.Text = "No";
             // 
             // logInRole
             // 
@@ -167,7 +201,7 @@ namespace Nhom5_QuanLySieuThi
             this.switchModeButton.Location = new System.Drawing.Point(60, 323);
             this.switchModeButton.Name = "switchModeButton";
             this.switchModeButton.Size = new System.Drawing.Size(92, 39);
-            this.switchModeButton.TabIndex = 1;
+            this.switchModeButton.TabIndex = 4;
             this.switchModeButton.Text = "REGISTER";
             this.switchModeButton.UseVisualStyleBackColor = false;
             this.switchModeButton.Click += new System.EventHandler(this.switchModeButton_Click);
@@ -182,7 +216,7 @@ namespace Nhom5_QuanLySieuThi
             this.cancelButton.Location = new System.Drawing.Point(169, 323);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(83, 39);
-            this.cancelButton.TabIndex = 1;
+            this.cancelButton.TabIndex = 3;
             this.cancelButton.Text = "CANCEL";
             this.cancelButton.UseVisualStyleBackColor = false;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
@@ -197,7 +231,7 @@ namespace Nhom5_QuanLySieuThi
             this.logInButton.Location = new System.Drawing.Point(268, 323);
             this.logInButton.Name = "logInButton";
             this.logInButton.Size = new System.Drawing.Size(75, 39);
-            this.logInButton.TabIndex = 1;
+            this.logInButton.TabIndex = 2;
             this.logInButton.Text = "LOG IN";
             this.logInButton.UseVisualStyleBackColor = false;
             this.logInButton.Click += new System.EventHandler(this.logInButton_Click);
@@ -213,7 +247,7 @@ namespace Nhom5_QuanLySieuThi
             this.password.Multiline = true;
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(252, 32);
-            this.password.TabIndex = 0;
+            this.password.TabIndex = 1;
             this.password.WordWrap = false;
             this.password.Click += new System.EventHandler(this.TextBox_Click);
             this.password.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.password_KeyPress);
@@ -246,40 +280,6 @@ namespace Nhom5_QuanLySieuThi
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(56, 90);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(125, 21);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Remember me?";
-            // 
-            // rememberMe
-            // 
-            this.rememberMe.BackColor = System.Drawing.Color.Transparent;
-            this.rememberMe.Location = new System.Drawing.Point(255, 83);
-            this.rememberMe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rememberMe.Name = "rememberMe";
-            this.rememberMe.Size = new System.Drawing.Size(89, 35);
-            this.rememberMe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.rememberMe.TabIndex = 12;
-            this.rememberMe.TabStop = false;
-            this.rememberMe.MouseClick += new System.Windows.Forms.MouseEventHandler(this.rememberMe_MouseClick);
-            // 
-            // rememberMeLabel
-            // 
-            this.rememberMeLabel.AutoSize = true;
-            this.rememberMeLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rememberMeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(42)))), ((int)(((byte)(61)))));
-            this.rememberMeLabel.Location = new System.Drawing.Point(187, 88);
-            this.rememberMeLabel.Name = "rememberMeLabel";
-            this.rememberMeLabel.Size = new System.Drawing.Size(34, 24);
-            this.rememberMeLabel.TabIndex = 2;
-            this.rememberMeLabel.Text = "No";
-            // 
             // FormDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -296,10 +296,10 @@ namespace Nhom5_QuanLySieuThi
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rememberMe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.passwordView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.toggleSwitch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rememberMe)).EndInit();
             this.ResumeLayout(false);
 
         }
