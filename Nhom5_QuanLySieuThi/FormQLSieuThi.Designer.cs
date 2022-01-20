@@ -51,7 +51,12 @@ namespace Nhom5_QuanLySieuThi
             // 
             // panelLoadForm
             // 
+<<<<<<< HEAD
             this.panelLoadForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+=======
+            this.panelLoadForm.BackColor = System.Drawing.Color.Gainsboro;
+            this.panelLoadForm.Dock = System.Windows.Forms.DockStyle.Fill;
+>>>>>>> 3487230753c025e9025c14d3dcc52402a630eb3b
             this.panelLoadForm.Location = new System.Drawing.Point(0, 90);
             this.panelLoadForm.Name = "panelLoadForm";
             this.panelLoadForm.Size = new System.Drawing.Size(958, 505);
@@ -59,15 +64,26 @@ namespace Nhom5_QuanLySieuThi
             // 
             // txtTimKiem
             // 
+            this.txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTimKiem.BackColor = System.Drawing.Color.Gainsboro;
             this.txtTimKiem.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTimKiem.ForeColor = System.Drawing.Color.DimGray;
+<<<<<<< HEAD
             this.txtTimKiem.Location = new System.Drawing.Point(225, 50);
             this.txtTimKiem.MaxLength = 100;
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(667, 32);
+=======
+            this.txtTimKiem.Location = new System.Drawing.Point(225, 52);
+            this.txtTimKiem.MaxLength = 100;
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(667, 27);
+>>>>>>> 3487230753c025e9025c14d3dcc52402a630eb3b
             this.txtTimKiem.TabIndex = 0;
+            this.txtTimKiem.Click += new System.EventHandler(this.txtTimKiem_Click);
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // label1
             // 
@@ -98,6 +114,7 @@ namespace Nhom5_QuanLySieuThi
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
@@ -108,6 +125,52 @@ namespace Nhom5_QuanLySieuThi
             this.label3.Text = "Quản Lý Siêu Thị";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+<<<<<<< HEAD
+=======
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Nhom5_QuanLySieuThi.Properties.Resources.credit_card;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(98, 80);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btGioHang
+            // 
+            this.btGioHang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btGioHang.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btGioHang.BackgroundImage = global::Nhom5_QuanLySieuThi.Properties.Resources.shoppingcart;
+            this.btGioHang.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btGioHang.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btGioHang.FlatAppearance.BorderSize = 0;
+            this.btGioHang.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btGioHang.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btGioHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btGioHang.Location = new System.Drawing.Point(908, 49);
+            this.btGioHang.Name = "btGioHang";
+            this.btGioHang.Size = new System.Drawing.Size(33, 33);
+            this.btGioHang.TabIndex = 6;
+            this.btGioHang.UseVisualStyleBackColor = false;
+            this.btGioHang.Click += new System.EventHandler(this.btGioHang_Click);
+            // 
+            // btTimKiem
+            // 
+            this.btTimKiem.BackColor = System.Drawing.Color.White;
+            this.btTimKiem.BackgroundImage = global::Nhom5_QuanLySieuThi.Properties.Resources.search;
+            this.btTimKiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btTimKiem.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btTimKiem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btTimKiem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btTimKiem.Location = new System.Drawing.Point(185, 49);
+            this.btTimKiem.Name = "btTimKiem";
+            this.btTimKiem.Size = new System.Drawing.Size(33, 33);
+            this.btTimKiem.TabIndex = 1;
+            this.btTimKiem.UseVisualStyleBackColor = false;
+            // 
+>>>>>>> 3487230753c025e9025c14d3dcc52402a630eb3b
             // panelHome
             // 
             this.panelHome.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -125,36 +188,56 @@ namespace Nhom5_QuanLySieuThi
             // 
             // lbToi
             // 
+            this.lbToi.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lbToi.AutoSize = true;
             this.lbToi.ForeColor = System.Drawing.Color.Gray;
+<<<<<<< HEAD
             this.lbToi.Location = new System.Drawing.Point(572, 39);
             this.lbToi.Name = "lbToi";
             this.lbToi.Size = new System.Drawing.Size(28, 17);
+=======
+            this.lbToi.Location = new System.Drawing.Point(609, 39);
+            this.lbToi.Name = "lbToi";
+            this.lbToi.Size = new System.Drawing.Size(27, 16);
+>>>>>>> 3487230753c025e9025c14d3dcc52402a630eb3b
             this.lbToi.TabIndex = 13;
             this.lbToi.Text = "Tôi";
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Gray;
             this.label2.Location = new System.Drawing.Point(443, 39);
             this.label2.Name = "label2";
+<<<<<<< HEAD
             this.label2.Size = new System.Drawing.Size(77, 17);
+=======
+            this.label2.Size = new System.Drawing.Size(73, 16);
+>>>>>>> 3487230753c025e9025c14d3dcc52402a630eb3b
             this.label2.TabIndex = 12;
             this.label2.Text = "Thông báo";
             // 
             // lbHome
             // 
+            this.lbHome.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lbHome.AutoSize = true;
             this.lbHome.ForeColor = System.Drawing.Color.Gray;
+<<<<<<< HEAD
             this.lbHome.Location = new System.Drawing.Point(355, 39);
             this.lbHome.Name = "lbHome";
             this.lbHome.Size = new System.Drawing.Size(45, 17);
+=======
+            this.lbHome.Location = new System.Drawing.Point(320, 39);
+            this.lbHome.Name = "lbHome";
+            this.lbHome.Size = new System.Drawing.Size(44, 16);
+>>>>>>> 3487230753c025e9025c14d3dcc52402a630eb3b
             this.lbHome.TabIndex = 11;
             this.lbHome.Text = "Home";
             // 
             // btThongBao
             // 
+            this.btThongBao.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btThongBao.BackgroundImage = global::Nhom5_QuanLySieuThi.Properties.Resources.bell2;
             this.btThongBao.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btThongBao.FlatAppearance.BorderSize = 0;
@@ -170,6 +253,7 @@ namespace Nhom5_QuanLySieuThi
             // 
             // btTaiKhoan
             // 
+            this.btTaiKhoan.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btTaiKhoan.BackgroundImage = global::Nhom5_QuanLySieuThi.Properties.Resources.user2;
             this.btTaiKhoan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btTaiKhoan.FlatAppearance.BorderColor = System.Drawing.Color.White;
@@ -177,7 +261,11 @@ namespace Nhom5_QuanLySieuThi
             this.btTaiKhoan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btTaiKhoan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<<<<<<< HEAD
             this.btTaiKhoan.Location = new System.Drawing.Point(570, 6);
+=======
+            this.btTaiKhoan.Location = new System.Drawing.Point(607, 6);
+>>>>>>> 3487230753c025e9025c14d3dcc52402a630eb3b
             this.btTaiKhoan.Name = "btTaiKhoan";
             this.btTaiKhoan.Size = new System.Drawing.Size(33, 33);
             this.btTaiKhoan.TabIndex = 9;
@@ -186,13 +274,18 @@ namespace Nhom5_QuanLySieuThi
             // 
             // btHome
             // 
+            this.btHome.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btHome.BackgroundImage = global::Nhom5_QuanLySieuThi.Properties.Resources.home2;
             this.btHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btHome.FlatAppearance.BorderSize = 0;
             this.btHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<<<<<<< HEAD
             this.btHome.Location = new System.Drawing.Point(360, 5);
+=======
+            this.btHome.Location = new System.Drawing.Point(325, 5);
+>>>>>>> 3487230753c025e9025c14d3dcc52402a630eb3b
             this.btHome.Name = "btHome";
             this.btHome.Size = new System.Drawing.Size(33, 33);
             this.btHome.TabIndex = 8;
@@ -247,9 +340,12 @@ namespace Nhom5_QuanLySieuThi
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(958, 655);
+<<<<<<< HEAD
+=======
+            this.Controls.Add(this.panelLoadForm);
+>>>>>>> 3487230753c025e9025c14d3dcc52402a630eb3b
             this.Controls.Add(this.panelHome);
             this.Controls.Add(this.panelTimKiem);
-            this.Controls.Add(this.panelLoadForm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormQLSieuThi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

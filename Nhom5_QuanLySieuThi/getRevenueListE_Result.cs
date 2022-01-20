@@ -15,7 +15,11 @@ namespace Nhom5_QuanLySieuThi
     {
         public int ProductID { get; set; }
         public string ProductName { get; set; }
+<<<<<<< HEAD
         public Nullable<int> number_of_product_sold { get; set; }
+=======
+        public Nullable<int> number_of_products_sold { get; set; }
+>>>>>>> 3487230753c025e9025c14d3dcc52402a630eb3b
         public Nullable<decimal> total { get; set; }
     }
 }

@@ -44,18 +44,31 @@ namespace Nhom5_QuanLySieuThi
             this.password = new System.Windows.Forms.TextBox();
             this.phoneNumber = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+<<<<<<< HEAD
+=======
+            this.label4 = new System.Windows.Forms.Label();
+            this.rememberMe = new System.Windows.Forms.PictureBox();
+            this.rememberMeLabel = new System.Windows.Forms.Label();
+>>>>>>> 3487230753c025e9025c14d3dcc52402a630eb3b
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.passwordView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toggleSwitch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+<<<<<<< HEAD
+=======
+            ((System.ComponentModel.ISupportInitialize)(this.rememberMe)).BeginInit();
+>>>>>>> 3487230753c025e9025c14d3dcc52402a630eb3b
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(240)))));
+            this.panel1.Controls.Add(this.rememberMe);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.passwordView);
             this.panel1.Controls.Add(this.toggleSwitch);
             this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.rememberMeLabel);
             this.panel1.Controls.Add(this.logInRole);
             this.panel1.Controls.Add(this.errorMessage);
             this.panel1.Controls.Add(this.label2);
@@ -75,7 +88,11 @@ namespace Nhom5_QuanLySieuThi
             this.passwordView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(42)))), ((int)(((byte)(61)))));
             this.passwordView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.passwordView.Image = ((System.Drawing.Image)(resources.GetObject("passwordView.Image")));
+<<<<<<< HEAD
             this.passwordView.Location = new System.Drawing.Point(311, 238);
+=======
+            this.passwordView.Location = new System.Drawing.Point(311, 246);
+>>>>>>> 3487230753c025e9025c14d3dcc52402a630eb3b
             this.passwordView.Name = "passwordView";
             this.passwordView.Size = new System.Drawing.Size(32, 32);
             this.passwordView.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -86,7 +103,7 @@ namespace Nhom5_QuanLySieuThi
             // toggleSwitch
             // 
             this.toggleSwitch.BackColor = System.Drawing.Color.Transparent;
-            this.toggleSwitch.Location = new System.Drawing.Point(254, 66);
+            this.toggleSwitch.Location = new System.Drawing.Point(256, 31);
             this.toggleSwitch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.toggleSwitch.Name = "toggleSwitch";
             this.toggleSwitch.Size = new System.Drawing.Size(89, 35);
@@ -99,19 +116,19 @@ namespace Nhom5_QuanLySieuThi
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(42)))), ((int)(((byte)(61)))));
-            this.label3.Location = new System.Drawing.Point(56, 75);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.Location = new System.Drawing.Point(58, 40);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 21);
+            this.label3.Size = new System.Drawing.Size(71, 21);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Log In As:";
+            this.label3.Text = "Login as:";
             // 
             // logInRole
             // 
             this.logInRole.AutoSize = true;
             this.logInRole.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logInRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(42)))), ((int)(((byte)(61)))));
-            this.logInRole.Location = new System.Drawing.Point(138, 72);
+            this.logInRole.Location = new System.Drawing.Point(140, 37);
             this.logInRole.Name = "logInRole";
             this.logInRole.Size = new System.Drawing.Size(47, 24);
             this.logInRole.TabIndex = 2;
@@ -121,7 +138,7 @@ namespace Nhom5_QuanLySieuThi
             // 
             this.errorMessage.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.errorMessage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.errorMessage.Location = new System.Drawing.Point(3, 371);
+            this.errorMessage.Location = new System.Drawing.Point(3, 376);
             this.errorMessage.Name = "errorMessage";
             this.errorMessage.Size = new System.Drawing.Size(398, 23);
             this.errorMessage.TabIndex = 2;
@@ -133,7 +150,7 @@ namespace Nhom5_QuanLySieuThi
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(30)))), ((int)(((byte)(50)))));
-            this.label2.Location = new System.Drawing.Point(56, 129);
+            this.label2.Location = new System.Drawing.Point(56, 137);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 21);
             this.label2.TabIndex = 2;
@@ -144,7 +161,7 @@ namespace Nhom5_QuanLySieuThi
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(30)))), ((int)(((byte)(50)))));
-            this.label1.Location = new System.Drawing.Point(56, 214);
+            this.label1.Location = new System.Drawing.Point(56, 222);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 21);
             this.label1.TabIndex = 2;
@@ -157,7 +174,7 @@ namespace Nhom5_QuanLySieuThi
             this.switchModeButton.FlatAppearance.BorderSize = 0;
             this.switchModeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.switchModeButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.switchModeButton.Location = new System.Drawing.Point(60, 315);
+            this.switchModeButton.Location = new System.Drawing.Point(60, 323);
             this.switchModeButton.Name = "switchModeButton";
             this.switchModeButton.Size = new System.Drawing.Size(92, 39);
             this.switchModeButton.TabIndex = 4;
@@ -172,7 +189,7 @@ namespace Nhom5_QuanLySieuThi
             this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.cancelButton.Location = new System.Drawing.Point(169, 315);
+            this.cancelButton.Location = new System.Drawing.Point(169, 323);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(83, 39);
             this.cancelButton.TabIndex = 3;
@@ -187,7 +204,7 @@ namespace Nhom5_QuanLySieuThi
             this.logInButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logInButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logInButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.logInButton.Location = new System.Drawing.Point(268, 315);
+            this.logInButton.Location = new System.Drawing.Point(268, 323);
             this.logInButton.Name = "logInButton";
             this.logInButton.Size = new System.Drawing.Size(75, 39);
             this.logInButton.TabIndex = 2;
@@ -201,7 +218,7 @@ namespace Nhom5_QuanLySieuThi
             this.password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.password.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.password.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.password.Location = new System.Drawing.Point(60, 238);
+            this.password.Location = new System.Drawing.Point(60, 246);
             this.password.MinimumSize = new System.Drawing.Size(240, 32);
             this.password.Multiline = true;
             this.password.Name = "password";
@@ -217,7 +234,7 @@ namespace Nhom5_QuanLySieuThi
             this.phoneNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.phoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phoneNumber.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.phoneNumber.Location = new System.Drawing.Point(60, 153);
+            this.phoneNumber.Location = new System.Drawing.Point(60, 161);
             this.phoneNumber.MinimumSize = new System.Drawing.Size(240, 32);
             this.phoneNumber.Multiline = true;
             this.phoneNumber.Name = "phoneNumber";
@@ -239,6 +256,43 @@ namespace Nhom5_QuanLySieuThi
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+<<<<<<< HEAD
+=======
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label4.Location = new System.Drawing.Point(56, 90);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(125, 21);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Remember me?";
+            // 
+            // rememberMe
+            // 
+            this.rememberMe.BackColor = System.Drawing.Color.Transparent;
+            this.rememberMe.Location = new System.Drawing.Point(255, 83);
+            this.rememberMe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rememberMe.Name = "rememberMe";
+            this.rememberMe.Size = new System.Drawing.Size(89, 35);
+            this.rememberMe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.rememberMe.TabIndex = 12;
+            this.rememberMe.TabStop = false;
+            this.rememberMe.MouseClick += new System.Windows.Forms.MouseEventHandler(this.rememberMe_MouseClick);
+            // 
+            // rememberMeLabel
+            // 
+            this.rememberMeLabel.AutoSize = true;
+            this.rememberMeLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rememberMeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(42)))), ((int)(((byte)(61)))));
+            this.rememberMeLabel.Location = new System.Drawing.Point(187, 88);
+            this.rememberMeLabel.Name = "rememberMeLabel";
+            this.rememberMeLabel.Size = new System.Drawing.Size(34, 24);
+            this.rememberMeLabel.TabIndex = 2;
+            this.rememberMeLabel.Text = "No";
+            // 
+>>>>>>> 3487230753c025e9025c14d3dcc52402a630eb3b
             // FormDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -258,6 +312,10 @@ namespace Nhom5_QuanLySieuThi
             ((System.ComponentModel.ISupportInitialize)(this.passwordView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.toggleSwitch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+<<<<<<< HEAD
+=======
+            ((System.ComponentModel.ISupportInitialize)(this.rememberMe)).EndInit();
+>>>>>>> 3487230753c025e9025c14d3dcc52402a630eb3b
             this.ResumeLayout(false);
 
         }
@@ -278,5 +336,8 @@ namespace Nhom5_QuanLySieuThi
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label errorMessage;
         private System.Windows.Forms.PictureBox passwordView;
+        private System.Windows.Forms.PictureBox rememberMe;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label rememberMeLabel;
     }
 }

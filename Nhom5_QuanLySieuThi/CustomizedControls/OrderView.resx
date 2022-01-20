@@ -117,26 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="getRevenueListEBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-<<<<<<< HEAD
-    <value>228, 17</value>
-  </metadata>
-  <metadata name="QuanLySieuThiDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="QuanLySieuThiDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="getRevenueListETableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>495, 17</value>
-=======
-    <value>236, 17</value>
-  </metadata>
-  <metadata name="QuanLySieuThiDataSet2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="getRevenueListETableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>503, 17</value>
->>>>>>> 3487230753c025e9025c14d3dcc52402a630eb3b
-  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="removeButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAWlJREFUaEPt
+        mV1OwkAURvvkbpTWVQjVR5dQ1oKPbbchugEpicYEfK8LsIo/LGK8N7mEUL/EsTOlxdyTnMc5M98DJIRA
+        URQ/TOPn+Oa8fCXNL1a3F+VQjvWHaVxWpLFyVL7Isf5wPSrNX5Rj7VNemqNlsr4iV6TZh0/J+m2ZfE34
+        bnlGczhEUrgTJ/KM5izGnyvSdOS7PKM5i/EHhbpTnuFGfjo3SPAVib91atY/0KjNyvXuoDirA3SAJSjO
+        9npAGs4eScPmEQWB3gaANru5Pw2LB3mWPRkdyqLCsCjOtj1gc38Wze/lWc3Yhnb1NQC1WbneHRRndYAO
+        sATFWR2gAyxBcVYH7G1ASEGgtwGgzcr17qA4qwN0gCUozuoAHWAJirMHM2D7025XXwNQm5Xr3UFx9nAG
+        DCgI9DYAtFm53h0UZ3WADrCEYlU9zrY5IBsU/v5Hy49nQ4r+GNHWAH58enJ3JtcrivJ/CYJvj7EQOcqX
+        RbYAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="expandButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAWFJREFUaEPt
+        lEFKw0AUhgd00YK4drrzGBUv4AF6BqFp7+BVFBeK1/AMIt10oSuXgkv7mhfmlzLOMEkzM5nA++CHJuTN
+        +/4EqgRBEARBEDKwUHTCMZfJSLKHD1xpul/P6PlO0am5HR3es9b0sLqgp2h7IF+HOKlK/MmbPVFK2PJI
+        7BL/5JE+JXzySKwSXnnkmBIheaRviaA80rVEfeit8yBHKk2PLGJGW8MzPOs60xV2MqNhWr8Zk65fIvX5
+        DamWZJEHsZdllQexlg4iD/ouH1QeHCtRhDzoKrPUu5dK/7b/q0wpD9qWqPSOrqcbupq8N79dzxwmizwI
+        lYD8pXptEiqRVR74StjyoRKDyAO7hE8esUsMKg9QIiSPoEQR8oBL3Jx/bl3CrvCzPGPGy2CuPqb12/12
+        CR9mPnn7WaqvMzNWFqESRcsDX4lRyAO7xKjkAUqMUh5wCY65FARBEARBKAul9kbJ74OVXc9gAAAAAElF
+        TkSuQmCC
+</value>
+  </data>
 </root>

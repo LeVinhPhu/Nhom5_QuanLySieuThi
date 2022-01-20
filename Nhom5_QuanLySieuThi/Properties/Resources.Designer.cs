@@ -83,6 +83,16 @@ namespace Nhom5_QuanLySieuThi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap collapse {
+            get {
+                object obj = ResourceManager.GetObject("collapse", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap credit_card {
             get {
                 object obj = ResourceManager.GetObject("credit-card", resourceCulture);
@@ -96,6 +106,16 @@ namespace Nhom5_QuanLySieuThi.Properties {
         internal static System.Drawing.Bitmap default_thumbnail {
             get {
                 object obj = ResourceManager.GetObject("default-thumbnail", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap expand {
+            get {
+                object obj = ResourceManager.GetObject("expand", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,6 +153,7 @@ namespace Nhom5_QuanLySieuThi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap icons8_print_15 {
             get {
                 object obj = ResourceManager.GetObject("icons8-print-15", resourceCulture);
@@ -156,6 +177,11 @@ namespace Nhom5_QuanLySieuThi.Properties {
         internal static System.Drawing.Bitmap icons8_print_301 {
             get {
                 object obj = ResourceManager.GetObject("icons8-print-301", resourceCulture);
+=======
+        internal static System.Drawing.Bitmap images {
+            get {
+                object obj = ResourceManager.GetObject("images", resourceCulture);
+>>>>>>> 3487230753c025e9025c14d3dcc52402a630eb3b
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

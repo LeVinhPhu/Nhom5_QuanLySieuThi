@@ -31,5 +31,31 @@ namespace Nhom5_QuanLySieuThi.DAO
             catch (Exception) { }
             return false;
         }
+
+        public Customer TryMatchingCustomer(string hash)
+        {
+            List<Customer> list = db.Customers.Select(i => i).ToList();
+            foreach (Customer customer in list)
+            {
+                string str = customer.PhoneCustomer + customer.PassWord;
+                string hashed = HashingService.ComputeSHA256(str);
+                if (hashed.Equals(hash))
+                    return customer;
+            }
+            return null;
+        }
+
+        public Employee TryMatchingEmployee(string hash)
+        {
+            List<Employee> list = db.Employees.Select(i => i).ToList();
+            foreach (Employee employee in list)
+            {
+                string str = employee.PhoneEmployee + employee.PassWord;
+                string hashed = HashingService.ComputeSHA256(str);
+                if (hashed.Equals(hash))
+                    return employee;
+            }
+            return null;
+        }
     }
 }

@@ -76,7 +76,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\AuthenticatorService.cs" />
     <Compile Include="BUS\BUS_Authentication.cs" />
+    <Compile Include="BUS\BUS_DonHang.cs" />
     <Compile Include="BUS\BUS_KhachHang.cs" />
     <Compile Include="BUS\BUS_NhanVien.cs" />
     <Compile Include="BUS\BUS_SanPham.cs" />
@@ -90,13 +92,27 @@
     <Compile Include="CustomizedControls\BoxView.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CustomizedControls\OrderDetailView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomizedControls\OrderDetailView.Designer.cs">
+      <DependentUpon>OrderDetailView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomizedControls\OrderView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomizedControls\OrderView.Designer.cs">
+      <DependentUpon>OrderView.cs</DependentUpon>
+    </Compile>
     <Compile Include="DAO\DAO_Authentication.cs" />
+    <Compile Include="DAO\DAO_DonHang.cs" />
     <Compile Include="DAO\DAO_KhachHang.cs" />
     <Compile Include="DAO\DAO_NhanVien.cs" />
     <Compile Include="DAO\DAO_SanPham.cs" />
     <Compile Include="Employee.cs">
       <DependentUpon>QuanLySieuThi.tt</DependentUpon>
     </Compile>
+    <Compile Include="EntryPoint.cs" />
     <Compile Include="FormDangKy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,10 +179,19 @@
     <Compile Include="FormToi.Designer.cs">
       <DependentUpon>FormToi.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="getRevenueListE_Result.cs">
       <DependentUpon>QuanLySieuThi.tt</DependentUpon>
+=======
+    <Compile Include="FormHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHistory.Designer.cs">
+      <DependentUpon>FormHistory.cs</DependentUpon>
+>>>>>>> 3487230753c025e9025c14d3dcc52402a630eb3b
     </Compile>
     <Compile Include="GlobalConfigs.cs" />
+    <Compile Include="HashingService.cs" />
     <Compile Include="Order.cs">
       <DependentUpon>QuanLySieuThi.tt</DependentUpon>
     </Compile>
@@ -210,6 +235,12 @@
     <EmbeddedResource Include="CustomizedControls\BoxView.resx">
       <DependentUpon>BoxView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedControls\OrderDetailView.resx">
+      <DependentUpon>OrderDetailView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedControls\OrderView.resx">
+      <DependentUpon>OrderView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDangKy.resx">
       <DependentUpon>FormDangKy.cs</DependentUpon>
     </EmbeddedResource>
@@ -242,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormToi.resx">
       <DependentUpon>FormToi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHistory.resx">
+      <DependentUpon>FormHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -333,6 +367,7 @@
       <DependentUpon>QuanLySieuThi.edmx</DependentUpon>
       <LastGenOutput>QuanLySieuThi.cs</LastGenOutput>
     </Content>
+<<<<<<< HEAD
     <None Include="Resources\icons8-print-30.png" />
     <None Include="Resources\icons8-print-301.png" />
     <None Include="Resources\icons8-print-15.png" />
@@ -349,6 +384,12 @@
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+=======
+
+    <None Include="Resources\c.png" />
+    <None Include="Resources\icons8-expand-arrow-48.png" />
+
+>>>>>>> 3487230753c025e9025c14d3dcc52402a630eb3b
     <None Include="Resources\eye-recognition.png" />
     <None Include="Resources\Picture1 - Copy.png" />
     <None Include="Resources\toggle_button_on.png" />

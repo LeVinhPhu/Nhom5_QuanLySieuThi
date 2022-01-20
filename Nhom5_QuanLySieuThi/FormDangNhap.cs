@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -17,6 +18,7 @@ namespace Nhom5_QuanLySieuThi
     {
         private bool passwordVisible = false;
         private bool isCustomer = true;
+        private bool rememberedMe = false;
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
 
@@ -43,10 +45,14 @@ namespace Nhom5_QuanLySieuThi
         {
             InitializeComponent();
             toggleSwitch.Image = Properties.Resources.toggle_button_off;
+            rememberMe.Image = Properties.Resources.toggle_button_off;
             logInRole.Text = "Customer";
+            rememberMeLabel.Text = "No";
             password.PasswordChar = '\u25CF';
             errorMessage.Visible = false;
         }
+
+        
 
         private void toggleSwitch_MouseClick(object sender, MouseEventArgs e)
         {
@@ -85,11 +91,26 @@ namespace Nhom5_QuanLySieuThi
             return password.Text;
         }
 
+        
+
         private void LaunchForm(Form form)
         {
             Thread thread = new Thread(() => Application.Run(form));
             thread.Start();
             this.Close();
+        }
+
+        private void TrySavingLogin(string phone, string password)
+        {
+            if (rememberedMe)
+            {
+                if (AuthenticatorService.SaveLogin(isCustomer, phone, password))
+                    MessageBox.Show("Login Information saved successfully", "Authenticator", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    MessageBox.Show("Failed to save Login Information", "Authenticator", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            else
+                AuthenticatorService.RemoveSavedLogin();
         }
 
         private void logInButton_Click(object sender, EventArgs e)
@@ -103,9 +124,11 @@ namespace Nhom5_QuanLySieuThi
                 {
                     // log in successfully
                     errorMessage.Visible = false;
-                    //this.Close();
                     GlobalConfigs.IsCustomer = isCustomer;
                     GlobalConfigs.PhoneNumber = phone;
+                    
+                    TrySavingLogin(phone, password);
+
                     if (isCustomer)
                         LaunchForm(new FormQLSieuThi());
                     else
@@ -173,6 +196,21 @@ namespace Nhom5_QuanLySieuThi
 
         }
 
+        private void rememberMe_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!rememberedMe)
+            {
+                rememberMe.Image = Properties.Resources.toggle_button_on;
+                rememberMeLabel.Text = "Yes";
+                rememberedMe = true;
+            }
+            else
+            {
+                rememberMe.Image = Properties.Resources.toggle_button_off;
+                rememberMeLabel.Text = "No";
+                rememberedMe = false;
+            }
+        }
     }
 
 }
