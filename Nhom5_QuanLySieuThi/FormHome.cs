@@ -3,7 +3,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace Nhom5_QuanLySieuThi
@@ -17,18 +16,6 @@ namespace Nhom5_QuanLySieuThi
         private Boolean increasedSize = false;
         private BUS_SanPham bUS_SanPham = new BUS_SanPham();
         private Button previousCategory = null;
-        private Button currentCategory;
-        private string filter;
-
-        public string Filter 
-        { 
-            get { return filter; }
-            set 
-            { 
-                filter = value;
-                OnCategoryMouseClick(currentCategory, null);
-            }
-        }
 
         public FormHome()
         {
@@ -36,19 +23,8 @@ namespace Nhom5_QuanLySieuThi
             originalCateforiesPanelWidth = categoriesPanel.Width;
             UpdateCategories();
             MainCommunicator = Communicator.Instance;
-            if (map.Count > 0)
-                OnCategoryMouseClick(map.Keys.First(), null);
         }
 
-        private bool MatchedFilter(BoxView boxView)
-        {
-            if (filter == null)
-                return true;
-
-            if (boxView.MainProduct.ProductName.ToLower().Contains(filter.ToLower()))
-                return true;
-            return false;
-        }
 
         public void UpdateCategories()
         {
@@ -76,20 +52,16 @@ namespace Nhom5_QuanLySieuThi
             }
 
             previousCategory = sender as Button;
-            currentCategory = sender as Button;
             (sender as Button).BackColor = Color.FromArgb(52, 58, 64);
             (sender as Button).ForeColor = Color.White;
 
             productsPanel.Controls.Clear();
 
             foreach(var boxView in map[sender as Button])
-                if (MatchedFilter(boxView))
-                    productsPanel.Controls.Add(boxView);
+                productsPanel.Controls.Add(boxView);
 
             if (productsPanel.Controls.Count == 0)
                 MessageBox.Show("This category has NO product", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            filter = null;
         }
 
 
@@ -133,8 +105,6 @@ namespace Nhom5_QuanLySieuThi
                         break;
                     }
             }
-
-           
         }
 
 

@@ -58,7 +58,7 @@ namespace Nhom5_QuanLySieuThi
 
         private void cancelButton_Click(object sender, EventArgs e)
         {
-            this.source.Close();
+            this.Close();
         }
 
         private void switchModeButton_Click(object sender, EventArgs e)
@@ -115,7 +115,7 @@ namespace Nhom5_QuanLySieuThi
                     GlobalConfigs.IsCustomer = true;
 
                     new Thread(() => Application.Run(new FormQLSieuThi())).Start();
-                    this.source.Close();
+                    this.Close();
                 }
                 else
                     MessageBox.Show("Cannot create new account", "Register aborted", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); ;

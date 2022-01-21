@@ -94,16 +94,5 @@ namespace Nhom5_QuanLySieuThi
             LoadFormThemSuaXoa();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            CloseForm();
-            FormSaleReport f = new FormSaleReport();
-            f.TopLevel = false;
-            panelLoadForm.Controls.Add(f);
-            f.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            f.Dock = DockStyle.Fill;
-            f.Show();
-
-        }
     }
 }

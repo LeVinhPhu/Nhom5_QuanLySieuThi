@@ -29,8 +29,7 @@ namespace Nhom5_QuanLySieuThi
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new EntryPoint());
-            new EntryPoint();
+            Application.Run(new FormDangNhap());
         }
         
     }

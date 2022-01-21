@@ -118,17 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="emptyCart.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAATBJREFUSEvF
-        l7EKwjAURfMRdnDQtR8gxaE6OTsIHfwBF8H099z9BV0FF911c9Hc6Cul1PblJZgLFwIvuackobwoSGdp
-        edwsL1ddPPfrxWE6HExsIYCQhUxknwwDLFvA4KaLV93n7eqRj5K5neAhZJisezPfwvEVzQLsC/8FhcFU
-        2IK2IiyFd0FhMBX2v61IdoX3QWEw7eH3TeTCOVBkVZeXu6ALLs7wgfustZIEeENJLkH5OJkFgZK4cLit
-        RnaCkjjwLougJCncC0rinGPdQaAkLjwoFIoCdj3nIHBXKNkLLoWSRXAOFMGcOWw4F4p5wX6ZLtDvEtaN
-        74RLoCTxWh8oyTkjWusTrdkzg/+3tzvT3sZo6PFciveEgcos1fbRZrYA+1/1vQGELGQiG4wPVKk3lrDU
-        4G7ZIe0AAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="viewHistoryButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAABIpJREFUSEvt

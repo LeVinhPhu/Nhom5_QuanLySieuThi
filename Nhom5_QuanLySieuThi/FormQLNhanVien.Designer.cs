@@ -35,7 +35,6 @@ namespace Nhom5_QuanLySieuThi
             this.panelTimKiem = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btGioHang = new System.Windows.Forms.Button();
             this.btTimKiem = new System.Windows.Forms.Button();
             this.panelHome = new System.Windows.Forms.Panel();
             this.lbToi = new System.Windows.Forms.Label();
@@ -44,7 +43,6 @@ namespace Nhom5_QuanLySieuThi
             this.btThongBao = new System.Windows.Forms.Button();
             this.btQLNhanVien = new System.Windows.Forms.Button();
             this.btHome = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panelTimKiem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelHome.SuspendLayout();
@@ -88,7 +86,6 @@ namespace Nhom5_QuanLySieuThi
             this.panelTimKiem.Controls.Add(this.label3);
             this.panelTimKiem.Controls.Add(this.label1);
             this.panelTimKiem.Controls.Add(this.pictureBox1);
-            this.panelTimKiem.Controls.Add(this.btGioHang);
             this.panelTimKiem.Controls.Add(this.btTimKiem);
             this.panelTimKiem.Controls.Add(this.txtTimKiem);
             this.panelTimKiem.Dock = System.Windows.Forms.DockStyle.Top;
@@ -106,7 +103,7 @@ namespace Nhom5_QuanLySieuThi
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(445, 29);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Quản Lý Nhân Viên";
+            this.label3.Text = "Quản Lý";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
@@ -118,22 +115,6 @@ namespace Nhom5_QuanLySieuThi
             this.pictureBox1.Size = new System.Drawing.Size(98, 80);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // btGioHang
-            // 
-            this.btGioHang.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btGioHang.BackgroundImage = global::Nhom5_QuanLySieuThi.Properties.Resources.shoppingcart;
-            this.btGioHang.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btGioHang.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btGioHang.FlatAppearance.BorderSize = 0;
-            this.btGioHang.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btGioHang.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btGioHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btGioHang.Location = new System.Drawing.Point(908, 49);
-            this.btGioHang.Name = "btGioHang";
-            this.btGioHang.Size = new System.Drawing.Size(33, 33);
-            this.btGioHang.TabIndex = 6;
-            this.btGioHang.UseVisualStyleBackColor = false;
             // 
             // btTimKiem
             // 
@@ -153,7 +134,6 @@ namespace Nhom5_QuanLySieuThi
             // panelHome
             // 
             this.panelHome.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panelHome.Controls.Add(this.button1);
             this.panelHome.Controls.Add(this.lbToi);
             this.panelHome.Controls.Add(this.label2);
             this.panelHome.Controls.Add(this.lbHome);
@@ -170,21 +150,21 @@ namespace Nhom5_QuanLySieuThi
             // 
             this.lbToi.AutoSize = true;
             this.lbToi.ForeColor = System.Drawing.Color.Gray;
-            this.lbToi.Location = new System.Drawing.Point(541, 39);
+            this.lbToi.Location = new System.Drawing.Point(542, 39);
             this.lbToi.Name = "lbToi";
-            this.lbToi.Size = new System.Drawing.Size(97, 17);
+            this.lbToi.Size = new System.Drawing.Size(89, 16);
             this.lbToi.TabIndex = 13;
-            this.lbToi.Text = "QL Nhân Viên";
+            this.lbToi.Text = "QL Sản Phẩm";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(443, 39);
+            this.label2.Location = new System.Drawing.Point(453, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 17);
+            this.label2.Size = new System.Drawing.Size(60, 16);
             this.label2.TabIndex = 12;
-            this.label2.Text = "Thông báo";
+            this.label2.Text = "Báo Cáo";
             // 
             // lbHome
             // 
@@ -192,7 +172,7 @@ namespace Nhom5_QuanLySieuThi
             this.lbHome.ForeColor = System.Drawing.Color.Gray;
             this.lbHome.Location = new System.Drawing.Point(355, 39);
             this.lbHome.Name = "lbHome";
-            this.lbHome.Size = new System.Drawing.Size(45, 17);
+            this.lbHome.Size = new System.Drawing.Size(44, 16);
             this.lbHome.TabIndex = 11;
             this.lbHome.Text = "Home";
             // 
@@ -242,16 +222,6 @@ namespace Nhom5_QuanLySieuThi
             this.btHome.UseVisualStyleBackColor = true;
             this.btHome.Click += new System.EventHandler(this.btHome_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(672, 14);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 34);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // FormQLNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -282,7 +252,6 @@ namespace Nhom5_QuanLySieuThi
         private System.Windows.Forms.Button btTimKiem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelTimKiem;
-        private System.Windows.Forms.Button btGioHang;
         private System.Windows.Forms.Panel panelHome;
         private System.Windows.Forms.Button btThongBao;
         private System.Windows.Forms.Button btQLNhanVien;
@@ -292,6 +261,5 @@ namespace Nhom5_QuanLySieuThi
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
     }
 }

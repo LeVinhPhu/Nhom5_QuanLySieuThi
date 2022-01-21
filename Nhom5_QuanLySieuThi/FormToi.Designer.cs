@@ -45,8 +45,6 @@ namespace Nhom5_QuanLySieuThi
             this.txtTen = new System.Windows.Forms.TextBox();
             this.btSuaTT = new System.Windows.Forms.Button();
             this.btThoat = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtPass = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -206,33 +204,12 @@ namespace Nhom5_QuanLySieuThi
             this.btThoat.Text = "Thoát";
             this.btThoat.UseVisualStyleBackColor = true;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(182, 411);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 20);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "Mật khẩu:";
-            // 
-            // txtPass
-            // 
-            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.Location = new System.Drawing.Point(328, 404);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.ReadOnly = true;
-            this.txtPass.Size = new System.Drawing.Size(301, 27);
-            this.txtPass.TabIndex = 19;
-            // 
             // FormToi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(958, 505);
-            this.Controls.Add(this.txtPass);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.btThoat);
             this.Controls.Add(this.btSuaTT);
             this.Controls.Add(this.r);
@@ -277,7 +254,7 @@ namespace Nhom5_QuanLySieuThi
         private System.Windows.Forms.TextBox txtTen;
         private System.Windows.Forms.Button btSuaTT;
         private System.Windows.Forms.Button btThoat;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtPass;
+
+
     }
 }

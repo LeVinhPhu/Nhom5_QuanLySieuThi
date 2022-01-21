@@ -32,7 +32,6 @@ namespace Nhom5_QuanLySieuThi
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGioHang));
             this.orderedProductsPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.emptyCart = new System.Windows.Forms.Button();
             this.totalPrice = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.numberOfProducts = new System.Windows.Forms.Label();
@@ -45,7 +44,6 @@ namespace Nhom5_QuanLySieuThi
             // orderedProductsPanel
             // 
             this.orderedProductsPanel.AutoScroll = true;
-            this.orderedProductsPanel.BackColor = System.Drawing.Color.Gainsboro;
             this.orderedProductsPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.orderedProductsPanel.Location = new System.Drawing.Point(0, 0);
             this.orderedProductsPanel.Name = "orderedProductsPanel";
@@ -54,46 +52,22 @@ namespace Nhom5_QuanLySieuThi
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.emptyCart);
             this.panel1.Controls.Add(this.totalPrice);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.numberOfProducts);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.viewHistoryButton);
             this.panel1.Controls.Add(this.purchaseButton);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 419);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(958, 86);
             this.panel1.TabIndex = 1;
             // 
-            // emptyCart
-            // 
-            this.emptyCart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.emptyCart.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.emptyCart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.emptyCart.FlatAppearance.BorderSize = 0;
-            this.emptyCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.emptyCart.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emptyCart.ForeColor = System.Drawing.Color.OrangeRed;
-            this.emptyCart.Image = ((System.Drawing.Image)(resources.GetObject("emptyCart.Image")));
-            this.emptyCart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.emptyCart.Location = new System.Drawing.Point(432, 16);
-            this.emptyCart.Name = "emptyCart";
-            this.emptyCart.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.emptyCart.Size = new System.Drawing.Size(169, 53);
-            this.emptyCart.TabIndex = 3;
-            this.emptyCart.Text = " EMPTY CART";
-            this.emptyCart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.emptyCart.UseVisualStyleBackColor = false;
-            this.emptyCart.Click += new System.EventHandler(this.emptyCart_Click);
-            // 
             // totalPrice
             // 
-            this.totalPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.totalPrice.AutoSize = true;
             this.totalPrice.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalPrice.ForeColor = System.Drawing.Color.OrangeRed;
@@ -105,7 +79,6 @@ namespace Nhom5_QuanLySieuThi
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.OrangeRed;
@@ -117,7 +90,6 @@ namespace Nhom5_QuanLySieuThi
             // 
             // numberOfProducts
             // 
-            this.numberOfProducts.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.numberOfProducts.AutoSize = true;
             this.numberOfProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numberOfProducts.Location = new System.Drawing.Point(208, 16);
@@ -128,7 +100,6 @@ namespace Nhom5_QuanLySieuThi
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(31, 16);
             this.label1.Name = "label1";
@@ -138,7 +109,6 @@ namespace Nhom5_QuanLySieuThi
             // 
             // viewHistoryButton
             // 
-            this.viewHistoryButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.viewHistoryButton.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.viewHistoryButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.viewHistoryButton.FlatAppearance.BorderSize = 0;
@@ -147,19 +117,17 @@ namespace Nhom5_QuanLySieuThi
             this.viewHistoryButton.ForeColor = System.Drawing.Color.OrangeRed;
             this.viewHistoryButton.Image = ((System.Drawing.Image)(resources.GetObject("viewHistoryButton.Image")));
             this.viewHistoryButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.viewHistoryButton.Location = new System.Drawing.Point(617, 16);
+            this.viewHistoryButton.Location = new System.Drawing.Point(570, 16);
             this.viewHistoryButton.Name = "viewHistoryButton";
             this.viewHistoryButton.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.viewHistoryButton.Size = new System.Drawing.Size(132, 53);
+            this.viewHistoryButton.Size = new System.Drawing.Size(179, 53);
             this.viewHistoryButton.TabIndex = 1;
-            this.viewHistoryButton.Text = " HISTORY";
+            this.viewHistoryButton.Text = " VIEW HISTORY";
             this.viewHistoryButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.viewHistoryButton.UseVisualStyleBackColor = false;
-            this.viewHistoryButton.Click += new System.EventHandler(this.viewHistoryButton_Click);
             // 
             // purchaseButton
             // 
-            this.purchaseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.purchaseButton.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.purchaseButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.purchaseButton.FlatAppearance.BorderSize = 0;
@@ -205,6 +173,5 @@ namespace Nhom5_QuanLySieuThi
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label numberOfProducts;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button emptyCart;
     }
 }

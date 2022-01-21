@@ -16,6 +16,7 @@
         <AssociationConnector Association="QuanLySieuThiModel.FK_Orders_Employees" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLySieuThiModel.FK_Order_Details_Orders" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLySieuThiModel.FK_Order_Details_Products" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="QuanLySieuThiModel.sysdiagram" Width="1.5" PointX="3.375" PointY="4.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
